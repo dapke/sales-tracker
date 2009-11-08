@@ -15,17 +15,9 @@ import net.sourceforge.stripes.action.Resolution;
  *
  * @author James
  */
-public class HelloWorldAction implements ActionBean {
+public class HelloWorldAction extends BaseAction {
 
-    private ActionBeanContext ctx;
-
-    public ActionBeanContext getContext() {
-        return ctx;
-    }
-
-    public void setContext(ActionBeanContext ctx) {
-        this.ctx = ctx;
-    }
+  
     private Date date;
 
     public Date getDate() {
@@ -38,11 +30,11 @@ public class HelloWorldAction implements ActionBean {
         return new ForwardResolution(VIEW);
     }
 
+
     public Resolution randomDate() {
-        long max = System.currentTimeMillis();
-//        long random = new Random().nextLong() % max;
         date = new Date();
         return new ForwardResolution(VIEW);
     }
     private static final String VIEW = "/jsp/hello.jsp";
+
 }
