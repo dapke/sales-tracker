@@ -1,6 +1,8 @@
 <%@page contentType="text/html;charset=ISO-8859-1" language="java" %>
 <%@taglib prefix="s" uri="http://stripes.sourceforge.net/stripes.tld" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
     "http://www.w3.org/TR/html4/strict.dtd" >
 <html>
@@ -15,13 +17,14 @@
                 <fmt:formatDate type="both" dateStyle="full"
                                 value="${actionBean.date}" />
             </b>
+                                <c:out value="${actionBean.date}" />
         </p>
         <p>
-    <s:link beanclass="stripesbook.action.HelloActionBean"
+    <s:link beanclass="com.jameselsey.salestracker.action.HelloWorldAction"
             event="currentDate" >
         Show the current date and time
     </s:link> |
-    <s:link beanclass="stripesbook.action.HelloActionBean"
+    <s:link beanclass="com.jameselsey.salestracker.action.HelloWorldAction"
             event="randomDate" >
         Show a random date and time
     </s:link>
