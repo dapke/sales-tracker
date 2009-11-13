@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Initial requirements, an overview of what the system intends to achieve
 
 = Requirements =
 
