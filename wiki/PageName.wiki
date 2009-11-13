@@ -1,4 +1,4 @@
-#Initial requirements, an overview of what the system intends to achieve
+Initial requirements, an overview of what the system intends to achieve
 
 = Requirements =
 
