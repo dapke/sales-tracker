@@ -19,5 +19,5 @@ public class MarketResearchAction extends BaseAction {
     public Resolution randomDate() {
         return new ForwardResolution(VIEW);
     }
-    private static final String VIEW = "/WEB-INF/jsp/marketResearch.jsp";
+    private static final String VIEW = "/jsp/hello.jsp";
 }

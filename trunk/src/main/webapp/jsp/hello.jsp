@@ -11,20 +11,13 @@
     </head>
     <body>
         <h3>Hello, Stripes!</h3>
+       
         <p>
-
-            <b>
-                <fmt:formatDate type="both" dateStyle="full"
-                                value="${actionBean.date}" />
-            </b>
-                                <c:out value="${actionBean.date}" />
-        </p>
-        <p>
-    <s:link beanclass="com.jameselsey.salestracker.action.HelloWorldAction"
+    <s:link beanclass="com.jameselsey.salestracker.action.DashboardAction"
             event="currentDate" >
         Show the current date and time
     </s:link> |
-    <s:link beanclass="com.jameselsey.salestracker.action.HelloWorldAction"
+    <s:link beanclass="com.jameselsey.salestracker.action.DashboardAction"
             event="randomDate" >
         Show a random date and time
     </s:link>
