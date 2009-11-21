@@ -10,6 +10,12 @@
             <param-name>ActionResolver.Packages</param-name>
             <param-value>com.jameselsey.salestracker.action</param-value>
         </init-param>
+        <init-param>
+            <param-name>MultipartWrapperFactory.Class</param-name>
+            <param-value>com.jameselsey.salestracker.util.EmptyMultipartWrapper</param-value>
+        </init-param>
+
+
     </filter>
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>

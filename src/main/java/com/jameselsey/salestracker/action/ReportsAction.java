@@ -19,5 +19,5 @@ public class ReportsAction extends BaseAction {
     public Resolution randomDate() {
         return new ForwardResolution(VIEW);
     }
-    private static final String VIEW = "/WEB-INF/jsp/reports.jsp";
+    private static final String VIEW = "/jsp/hello.jsp";
 }
