@@ -19,5 +19,5 @@ public class DashboardAction extends BaseAction {
     public Resolution randomDate() {
         return new ForwardResolution(VIEW);
     }
-    private static final String VIEW = "/jsp/hello.jsp";
+    private static final String VIEW = "/jsp/dashboard.jsp";
 }

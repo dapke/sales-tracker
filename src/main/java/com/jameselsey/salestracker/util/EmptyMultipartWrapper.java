@@ -11,9 +11,9 @@ import net.sourceforge.stripes.config.ConfigurableComponent;
 import net.sourceforge.stripes.controller.multipart.MultipartWrapperFactory;
 
 /**
- * GAE does not support file uploading so we need to disable this feature from Stripes.
+ * GAE has no support for uploading of files, so we use this to disable that part of Stripes
  *
- * @author 110j
+ * @author james.elsey
  */
 public class EmptyMultipartWrapper implements ConfigurableComponent, MultipartWrapperFactory {
 
