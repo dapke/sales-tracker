@@ -1,13 +1,6 @@
-<%@page contentType="text/html;charset=ISO-8859-1" language="java" %>
-<%@taglib prefix="s" uri="http://stripes.sourceforge.net/stripes.tld" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-<%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld" %>
+<%@include file="/jsp/common/taglibs.jsp" %>
 
-
-
-
-
-<stripes:layout-render name="/jsp/default.jsp">
+<stripes:layout-render name="/jsp/common/default.jsp">
     <stripes:layout-component name="menu">
         <p>
             <s:link beanclass="com.jameselsey.salestracker.action.DashboardAction">
