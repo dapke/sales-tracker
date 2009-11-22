@@ -1,5 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld" %>
+<%@include file="/jsp/common/taglibs.jsp" %>
 
 <stripes:layout-definition>
     <html>
@@ -14,7 +13,7 @@
             </stripes:layout-component>--%>
 
             <stripes:layout-component name="menu">
-                <jsp:include page="/jsp/menu.jsp"/>
+                <jsp:include page="/jsp/common/menu.jsp"/>
             </stripes:layout-component>
 
 
