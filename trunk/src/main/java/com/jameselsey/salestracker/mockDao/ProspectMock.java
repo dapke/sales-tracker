@@ -5,11 +5,11 @@ import com.jameselsey.salestracker.domain.Prospect;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ProspectMock implements ProspectDao
 {
 
-    public List<Prospect> fetchProspects() {
+    public List<Prospect> fetchProspects()
+    {
 
         List<Prospect> prospects = new ArrayList<Prospect>();
 
@@ -17,12 +17,8 @@ public class ProspectMock implements ProspectDao
 
         prospect1.setName("Suffolk County Council");
 
-
-
-
         prospects.add(prospect1);
 
         return prospects;
     }
-
 }

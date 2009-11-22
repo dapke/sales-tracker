@@ -7,5 +7,4 @@ public interface ProspectDao
 {
 
     public List<Prospect> fetchProspects();
-
 }

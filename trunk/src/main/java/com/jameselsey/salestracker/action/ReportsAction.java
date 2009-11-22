@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.jameselsey.salestracker.action;
 
 import net.sourceforge.stripes.action.DefaultHandler;
@@ -12,11 +8,12 @@ import net.sourceforge.stripes.action.Resolution;
  *
  * @author James
  */
-public class ReportsAction extends BaseAction {
+public class ReportsAction extends BaseAction
+{
 
-    
     @DefaultHandler
-    public Resolution randomDate() {
+    public Resolution randomDate()
+    {
         return new ForwardResolution(VIEW);
     }
     private static final String VIEW = "/jsp/reports.jsp";
