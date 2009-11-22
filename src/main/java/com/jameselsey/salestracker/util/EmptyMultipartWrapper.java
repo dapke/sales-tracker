@@ -15,18 +15,21 @@ import net.sourceforge.stripes.controller.multipart.MultipartWrapperFactory;
  *
  * @author james.elsey
  */
-public class EmptyMultipartWrapper implements ConfigurableComponent, MultipartWrapperFactory {
+public class EmptyMultipartWrapper implements ConfigurableComponent, MultipartWrapperFactory
+{
 
-	/**
-	 * @see net.sourceforge.stripes.config.ConfigurableComponent#init(net.sourceforge.stripes.config.Configuration)
-	 */
-	public void init(Configuration conf) throws Exception {
-	}
+    /**
+     * @see net.sourceforge.stripes.config.ConfigurableComponent#init(net.sourceforge.stripes.config.Configuration)
+     */
+    public void init(Configuration conf) throws Exception
+    {
+    }
 
-	/**
-	 * @see net.sourceforge.stripes.controller.multipart.MultipartWrapperFactory#wrap(javax.servlet.http.HttpServletRequest)
-	 */
-	public MultipartWrapper wrap(HttpServletRequest request) throws IOException, FileUploadLimitExceededException {
-		return null;
-	}
+    /**
+     * @see net.sourceforge.stripes.controller.multipart.MultipartWrapperFactory#wrap(javax.servlet.http.HttpServletRequest)
+     */
+    public MultipartWrapper wrap(HttpServletRequest request) throws IOException, FileUploadLimitExceededException
+    {
+        return null;
+    }
 }

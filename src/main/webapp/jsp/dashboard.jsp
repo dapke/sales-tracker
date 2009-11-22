@@ -5,16 +5,12 @@
 
         <p>this is my dashboard page,I haven't actually wrote anything yet just testing some shiz</p>
 
-        <p>
-
 
             <c:forEach var="prospect" items="${actionBean.prospects}">
             <tr>
                 <td>${prospect.name}</td>
             </tr>
-        </c:forEach>
-
-    </p>
+            </c:forEach>
 
 
 </stripes:layout-component>
