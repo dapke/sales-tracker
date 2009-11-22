@@ -19,5 +19,5 @@ public class CustomerSearchAction extends BaseAction {
     public Resolution randomDate() {
         return new ForwardResolution(VIEW);
     }
-    private static final String VIEW = "/jsp/hello.jsp";
+    private static final String VIEW = "/jsp/customerSearch.jsp";
 }
