@@ -1,0 +1,50 @@
+/* CSS Document */
+html, body {
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#006699;
+}
+
+#siteWrap {
+	width:780px;
+	margin:0 auto;
+	background-color:#FFFFFF;
+	padding:10px;
+}
+
+#header {
+	background-color:#006699;
+}
+
+#navBar {
+	background-color:#eeeeee;
+	border-top:#FFFFFF solid 1px;
+	border-bottom:#CCCCCC solid 1px;
+}
+
+#content {
+	padding:10px;
+}
+
+#footer {
+	background-color:#eeeeee;
+	padding:10px;
+	border-top:#CCCCCC solid 1px;
+	text-align:center;
+}
+
+a.navLink:link, a.navLink:visited {
+	color:#336699;
+	text-decoration:none;
+	padding:0px;
+	padding-left:10px;
+	padding-right:10px;
+	border-right:#CCCCCC dotted 1px;
+	border-left:#CCCCCC dotted 1px;
+	font-size:14px;
+}
+
+a.navLink:hover {
+	background-color:#336699;
+	color:#ffffff;
+}

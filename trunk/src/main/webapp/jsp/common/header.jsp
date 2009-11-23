@@ -1,6 +1,2 @@
-<%@include file="/jsp/common/taglibs.jsp" %>
-
-<p>
-<h1><i>Sales-Tracker</i></h1>
-</p>
+<img src="jsp/css/salestrackerlogo.jpg" width="780" height="119" />
 
