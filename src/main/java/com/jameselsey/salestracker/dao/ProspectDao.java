@@ -7,4 +7,5 @@ public interface ProspectDao
 {
 
     public List<Prospect> fetchProspects();
+    public Prospect getProspectById(Integer prospectId);
 }

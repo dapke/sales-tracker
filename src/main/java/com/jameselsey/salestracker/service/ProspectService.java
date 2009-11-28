@@ -15,4 +15,8 @@ public class ProspectService
 
         return prospectDao.fetchProspects();
     }
+    public Prospect getProspectById(Integer prospectId)
+    {
+        return prospectDao.getProspectById(prospectId);
+    }
 }
