@@ -2,8 +2,20 @@ package com.jameselsey.salestracker.domain;
 
 public class Prospect
 {
+
+    private Integer id;
     private String name;
     private String sector;
+
+    public Integer getId()
+    {
+        return id;
+    }
+
+    public void setId(Integer Id)
+    {
+        this.id = Id;
+    }
 
     public String getName()
     {
@@ -24,6 +36,4 @@ public class Prospect
     {
         this.sector = sector;
     }
-
-
 }
