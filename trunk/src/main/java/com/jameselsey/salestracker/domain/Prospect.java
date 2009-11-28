@@ -3,6 +3,7 @@ package com.jameselsey.salestracker.domain;
 public class Prospect
 {
     private String name;
+    private String sector;
 
     public String getName()
     {
@@ -13,4 +14,16 @@ public class Prospect
     {
         this.name = name;
     }
+
+    public String getSector()
+    {
+        return sector;
+    }
+
+    public void setSector(String sector)
+    {
+        this.sector = sector;
+    }
+
+
 }
