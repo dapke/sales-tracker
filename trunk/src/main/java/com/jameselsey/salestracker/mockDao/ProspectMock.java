@@ -41,7 +41,7 @@ public class ProspectMock implements ProspectDao
         prospect2.setCountry("England");
         prospect2.setMainPhoneNumber("0845 743 0430");
         prospect2.setWebsiteURL("www.essex.gov.uk");
-        prospect2.setContacts(contacts);
+        prospect2.setContacts(initialiseContacts());
 
         Prospect prospect3 = new Prospect();
         prospect3.setId(3);
@@ -55,7 +55,7 @@ public class ProspectMock implements ProspectDao
         prospect3.setCountry("England");
         prospect3.setMainPhoneNumber("01473 382200");
         prospect3.setWebsiteURL("www.suffolk.ac.uk");
-        prospect3.setContacts(contacts);
+        prospect3.setContacts(initialiseContacts());
 
         Prospect prospect4 = new Prospect();
         prospect4.setId(4);
@@ -69,7 +69,7 @@ public class ProspectMock implements ProspectDao
         prospect4.setCountry("England");
         prospect4.setMainPhoneNumber("01223 717 111");
         prospect4.setWebsiteURL("www.cambridgeshire.gov.uk");
-        prospect4.setContacts(contacts);
+        prospect4.setContacts(initialiseContacts());
 
         Prospect prospect5 = new Prospect();
         prospect5.setId(5);
@@ -83,7 +83,7 @@ public class ProspectMock implements ProspectDao
         prospect5.setCountry("England");
         prospect5.setMainPhoneNumber("01473 432000");
         prospect5.setWebsiteURL("www.ipswich.gov.uk");
-        prospect5.setContacts(contacts);
+        prospect5.setContacts(initialiseContacts());
 
         Prospect prospect6 = new Prospect();
         prospect6.setId(6);
@@ -97,7 +97,7 @@ public class ProspectMock implements ProspectDao
         prospect6.setCountry("England");
         prospect6.setMainPhoneNumber("01787 372 331");
         prospect6.setWebsiteURL("www.sudburytowncouncil.co.uk");
-        prospect6.setContacts(contacts);
+        prospect6.setContacts(initialiseContacts());
 
         Prospect prospect7 = new Prospect();
         prospect7.setId(7);
@@ -111,7 +111,7 @@ public class ProspectMock implements ProspectDao
         prospect7.setCountry("England");
         prospect7.setMainPhoneNumber("0845 271 3333");
         prospect7.setWebsiteURL("www.anglia.ac.uk");
-        prospect7.setContacts(contacts);
+        prospect7.setContacts(initialiseContacts());
 
         Prospect prospect8 = new Prospect();
         prospect8.setId(8);
@@ -125,7 +125,7 @@ public class ProspectMock implements ProspectDao
         prospect8.setCountry("England");
         prospect8.setMainPhoneNumber("01473 218818");
         prospect8.setWebsiteURL("www.orwell-housing.co.uk");
-        prospect8.setContacts(contacts);
+        prospect8.setContacts(initialiseContacts());
 
         prospects.add(prospect1);
         prospects.add(prospect2);
