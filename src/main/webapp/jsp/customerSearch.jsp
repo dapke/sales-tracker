@@ -2,6 +2,8 @@
 
 <stripes:layout-render name="/jsp/common/layout.jsp">
     <stripes:layout-component name="contents">
+
+
         <table>
             <tr><th>Oppurtunity</th>
                 <th>Sector</th>

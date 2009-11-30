@@ -34,11 +34,25 @@ public class ViewProspectAction extends BaseAction
     }
 
     @DefaultHandler
-    public Resolution show()
+    public Resolution quickView()
     {
-
-        return new ForwardResolution(VIEW);
-
+          return new ForwardResolution("/jsp/viewProspectQuickView.jsp");
     }
-    private static final String VIEW = "/jsp/viewProspect.jsp";
+
+
+    public Resolution viewProspectInfo()
+    {
+        return new ForwardResolution("/jsp/viewProspectProspectInfo.jsp");
+    }
+
+    public Resolution viewProspectContacts()
+    {
+          return new ForwardResolution("/jsp/viewProspectContacts.jsp");
+    }
+    
+    public Resolution viewProspectProjects()
+    {
+          return new ForwardResolution("/jsp/viewProspectProjects.jsp");
+    }
+
 }

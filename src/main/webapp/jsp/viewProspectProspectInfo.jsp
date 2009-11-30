@@ -3,8 +3,14 @@
 <stripes:layout-render name="/jsp/common/layout.jsp">
     <stripes:layout-component name="contents">
 
+        <p>
+            <s:form beanclass="com.jameselsey.salestracker.action.ViewProspectAction" >
+                <s:hidden name="prospectId" />
+                <jsp:include page="/jsp/common/menuProspect.jsp"/>
+            </s:form>
+        </p>
 
-        <table>
+ <table>
             <tr>
                 <td>Name : </td>
                 <td>${actionBean.prospect.name}</td>
@@ -48,16 +54,10 @@
 
         </table>
 
-        <d:table name="${actionBean.prospect.contacts}" id="contact" requestURI=""
-                 defaultsort="1" >
-            <d:column title="Last name" property="lastName"
-                      sortable="true" />
-            <d:column title="First name" property="firstName"
-                      sortable="true" />
-
-
-        </d:table>
-
+            <p>
+                I'll put some more info here about the prospect, probably market research info. Hopefully
+                I'll be able to integrate google maps and have a map showing the location by using the postcode
+            </p>
 
 </stripes:layout-component>
 </stripes:layout-render>
