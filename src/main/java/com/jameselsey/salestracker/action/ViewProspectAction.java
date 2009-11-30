@@ -24,16 +24,19 @@ public class ViewProspectAction extends BaseAction
     }
 
 
-
-
+    
     public Prospect getProspect()
     {
-        return prospectService.getProspectById(prospectId);
+//        return
+              Prospect p =  prospectService.getProspectById(prospectId);
+              System.out.println(p.getContacts().get(0).getFirstName());
+              return p;
     }
 
     @DefaultHandler
     public Resolution show()
     {
+
         return new ForwardResolution(VIEW);
 
     }
