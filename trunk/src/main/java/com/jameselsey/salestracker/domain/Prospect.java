@@ -1,5 +1,7 @@
 package com.jameselsey.salestracker.domain;
 
+import java.util.List;
+
 public class Prospect
 {
 
@@ -14,6 +16,7 @@ public class Prospect
     private String country;
     private String websiteURL;
     private String mainPhoneNumber;
+    private List<Contact> contacts;
 
     public Integer getId()
     {
@@ -123,6 +126,16 @@ public class Prospect
     public void setPostcode(String postcode)
     {
         this.postcode = postcode;
+    }
+
+    public List<Contact> getContacts()
+    {
+        return contacts;
+    }
+
+    public void setContacts(List<Contact> contacts)
+    {
+        this.contacts = contacts;
     }
 
     

@@ -48,7 +48,18 @@
 
         </table>
 
-    </stripes:layout-component>
+        <d:table name="${actionBean.prospect.contacts}" id="contact" requestURI=""
+                 defaultsort="1" >
+            <d:column title="Last name" property="lastName"
+                      sortable="true" />
+            <d:column title="First name" property="firstName"
+                      sortable="true" />
+
+
+        </d:table>
+
+
+</stripes:layout-component>
 </stripes:layout-render>
 
 

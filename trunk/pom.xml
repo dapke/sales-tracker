@@ -117,6 +117,13 @@
             <version>2.5.6</version>
         </dependency>
         
+        <!-- DisplayTag -->
+        <dependency>
+            <groupId>displaytag</groupId>
+            <artifactId>displaytag</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
     </dependencies>
     <build>
         <plugins>
