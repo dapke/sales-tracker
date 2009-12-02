@@ -4,28 +4,30 @@ public class MarketResearch
 {
 
     private Integer id;
-    private String currentDMS;
-    private String currentCRM;
+    private String currentHousingSystem;
+    private String currentStudentServicesSystem;
 
-    public String getCurrentCRM()
+    public String getCurrentHousingSystem()
     {
-        return currentCRM;
+        return currentHousingSystem;
     }
 
-    public void setCurrentCRM(String currentCRM)
+    public void setCurrentHousingSystem(String currentHousingSystem)
     {
-        this.currentCRM = currentCRM;
+        this.currentHousingSystem = currentHousingSystem;
     }
 
-    public String getCurrentDMS()
+    public String getCurrentStudentServicesSystem()
     {
-        return currentDMS;
+        return currentStudentServicesSystem;
     }
 
-    public void setCurrentDMS(String currentDMS)
+    public void setCurrentStudentServicesSystem(String currentStudentServicesSystem)
     {
-        this.currentDMS = currentDMS;
+        this.currentStudentServicesSystem = currentStudentServicesSystem;
     }
+
+
 
     public Integer getId()
     {
