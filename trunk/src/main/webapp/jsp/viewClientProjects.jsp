@@ -4,16 +4,16 @@
     <stripes:layout-component name="contents">
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewProspectAction" >
-                <s:hidden name="prospectId" />
-                <jsp:include page="/jsp/common/menuProspect.jsp"/>
+            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
+                <s:hidden name="clientId" />
+                <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
 
         Projects here
 
         <p>
-            <d:table name="${actionBean.prospect.projects}" id="contact" requestURI=""
+            <d:table name="${actionBean.client.projects}" id="contact" requestURI=""
                      defaultsort="1" >
                 <d:column title="Project Type" property="type"
                           sortable="true" />

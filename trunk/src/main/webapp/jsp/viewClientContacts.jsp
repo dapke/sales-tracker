@@ -4,9 +4,9 @@
     <stripes:layout-component name="contents">
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewProspectAction" >
-                <s:hidden name="prospectId" />
-                <jsp:include page="/jsp/common/menuProspect.jsp"/>
+            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
+                <s:hidden name="clientId" />
+                <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
 

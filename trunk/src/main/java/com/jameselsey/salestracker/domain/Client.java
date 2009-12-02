@@ -2,7 +2,7 @@ package com.jameselsey.salestracker.domain;
 
 import java.util.List;
 
-public class Prospect
+public class Client
 {
 
     private Integer id;

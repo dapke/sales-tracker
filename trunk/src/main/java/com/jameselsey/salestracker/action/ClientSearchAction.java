@@ -1,7 +1,7 @@
 package com.jameselsey.salestracker.action;
 
-import com.jameselsey.salestracker.domain.Prospect;
-import com.jameselsey.salestracker.service.ProspectService;
+import com.jameselsey.salestracker.domain.Client;
+import com.jameselsey.salestracker.service.ClientService;
 import java.util.List;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
@@ -11,14 +11,14 @@ import net.sourceforge.stripes.action.Resolution;
  *
  * @author James
  */
-public class CustomerSearchAction extends BaseAction
+public class ClientSearchAction extends BaseAction
 {
 
-    ProspectService prospectService = new ProspectService();
+    ClientService clientService = new ClientService();
 
-    public List<Prospect> getProspects()
+    public List<Client> getClients()
     {
-        return prospectService.fetchProspects();
+        return clientService.fetchClients();
     }
 
     @DefaultHandler

@@ -9,13 +9,13 @@
                 <th>Sector</th>
                 <th></th>
             </tr>
-            <c:forEach var="prospect" items="${actionBean.prospects}">
+            <c:forEach var="client" items="${actionBean.clients}">
                 <tr>
-                    <td>${prospect.name}</td>
-                    <td>${prospect.sector}</td>
-                    <td><stripes:link beanclass="com.jameselsey.salestracker.action.ViewProspectAction">
+                    <td>${client.name}</td>
+                    <td>${client.sector}</td>
+                    <td><stripes:link beanclass="com.jameselsey.salestracker.action.ViewClientAction">
                              View
-                            <stripes:param name="prospectId" value="${prospect.id}"/>
+                            <stripes:param name="clientId" value="${client.id}"/>
                         </stripes:link>
                     </td>
                 </tr>
