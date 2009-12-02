@@ -203,14 +203,14 @@ public class ClientMock implements ClientDao
         Project project1 = new Project();
 
         project1.setId(1);
-        project1.setType("DMS Install");
+        project1.setType("Housing System Install");
         project1.setValue("£2000");
 
 
         Project project2 = new Project();
 
         project2.setId(1);
-        project2.setType("CRM Install");
+        project2.setType("Student Services Install");
         project2.setValue("£7000");
 
         List<Project> projects = new ArrayList<Project>();
@@ -225,8 +225,8 @@ public class ClientMock implements ClientDao
         MarketResearch marketResearch = new MarketResearch();
 
         marketResearch.setId(1);
-        marketResearch.setCurrentCRM("MS CRM 2009");
-        marketResearch.setCurrentDMS("Sharepoint 2007");
+        marketResearch.setCurrentHousingSystem("Microsoft Housing Systems");
+        marketResearch.setCurrentStudentServicesSystem("Apple STU-Services");
 
         return marketResearch;
     }

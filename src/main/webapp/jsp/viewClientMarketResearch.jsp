@@ -13,8 +13,8 @@
         Market Research
 
         <p>
-            ${actionBean.client.marketResearch.currentDMS}<br>
-            ${actionBean.client.marketResearch.currentCRM}
+            ${actionBean.client.marketResearch.currentHousingSystem}<br>
+            ${actionBean.client.marketResearch.currentStudentServicesSystem}
         </p>
         <p>
             Some info here about market research, gathering some information for that client so you
