@@ -18,6 +18,7 @@ public class Prospect
     private String mainPhoneNumber;
     private List<Contact> contacts;
     private List<Project> projects;
+    private MarketResearch marketResearch;
 
     public Integer getId()
     {
@@ -148,4 +149,16 @@ public class Prospect
     {
         this.projects = projects;
     }
+
+    public MarketResearch getMarketResearch()
+    {
+        return marketResearch;
+    }
+
+    public void setMarketResearch(MarketResearch marketResearch)
+    {
+        this.marketResearch = marketResearch;
+    }
+
+
 }

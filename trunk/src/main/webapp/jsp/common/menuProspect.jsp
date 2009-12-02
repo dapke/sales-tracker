@@ -17,6 +17,11 @@
         <stripes:param name="prospectId" value="${actionBean.prospect.id}"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewProspectAction"
+            event="viewProspectMarketResearch" class="navLink">
+        Market Research
+        <stripes:param name="prospectId" value="${actionBean.prospect.id}"/>
+    </s:link> |
+    <s:link beanclass="com.jameselsey.salestracker.action.ViewProspectAction"
             event="viewProspectProjects" class="navLink">
         Projects
         <stripes:param name="prospectId" value="${actionBean.prospect.id}"/>

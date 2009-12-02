@@ -2,6 +2,7 @@ package com.jameselsey.salestracker.mockDao;
 
 import com.jameselsey.salestracker.dao.ProspectDao;
 import com.jameselsey.salestracker.domain.Contact;
+import com.jameselsey.salestracker.domain.MarketResearch;
 import com.jameselsey.salestracker.domain.Project;
 import com.jameselsey.salestracker.domain.Prospect;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class ProspectMock implements ProspectDao
         prospect1.setWebsiteURL("www.suffolk.gov.uk");
         prospect1.setContacts(initialiseContacts());
         prospect1.setProjects(initialiseProjects());
+        prospect1.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect2 = new Prospect();
         prospect2.setId(2);
@@ -45,6 +47,7 @@ public class ProspectMock implements ProspectDao
         prospect2.setWebsiteURL("www.essex.gov.uk");
         prospect2.setContacts(initialiseContacts());
         prospect2.setProjects(initialiseProjects());
+        prospect2.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect3 = new Prospect();
         prospect3.setId(3);
@@ -60,6 +63,7 @@ public class ProspectMock implements ProspectDao
         prospect3.setWebsiteURL("www.suffolk.ac.uk");
         prospect3.setContacts(initialiseContacts());
         prospect3.setProjects(initialiseProjects());
+        prospect3.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect4 = new Prospect();
         prospect4.setId(4);
@@ -75,6 +79,7 @@ public class ProspectMock implements ProspectDao
         prospect4.setWebsiteURL("www.cambridgeshire.gov.uk");
         prospect4.setContacts(initialiseContacts());
         prospect4.setProjects(initialiseProjects());
+        prospect4.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect5 = new Prospect();
         prospect5.setId(5);
@@ -90,6 +95,7 @@ public class ProspectMock implements ProspectDao
         prospect5.setWebsiteURL("www.ipswich.gov.uk");
         prospect5.setContacts(initialiseContacts());
         prospect5.setProjects(initialiseProjects());
+        prospect5.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect6 = new Prospect();
         prospect6.setId(6);
@@ -105,6 +111,7 @@ public class ProspectMock implements ProspectDao
         prospect6.setWebsiteURL("www.sudburytowncouncil.co.uk");
         prospect6.setContacts(initialiseContacts());
         prospect6.setProjects(initialiseProjects());
+        prospect6.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect7 = new Prospect();
         prospect7.setId(7);
@@ -120,6 +127,7 @@ public class ProspectMock implements ProspectDao
         prospect7.setWebsiteURL("www.anglia.ac.uk");
         prospect7.setContacts(initialiseContacts());
         prospect7.setProjects(initialiseProjects());
+        prospect7.setMarketResearch(initialiseMarketResearch());
 
         Prospect prospect8 = new Prospect();
         prospect8.setId(8);
@@ -135,6 +143,7 @@ public class ProspectMock implements ProspectDao
         prospect8.setWebsiteURL("www.orwell-housing.co.uk");
         prospect8.setContacts(initialiseContacts());
         prospect8.setProjects(initialiseProjects());
+        prospect8.setMarketResearch(initialiseMarketResearch());
 
         prospects.add(prospect1);
         prospects.add(prospect2);
@@ -209,5 +218,16 @@ public class ProspectMock implements ProspectDao
         projects.add(project1);
         projects.add(project2);
         return projects;
+    }
+
+    public MarketResearch initialiseMarketResearch()
+    {
+        MarketResearch marketResearch = new MarketResearch();
+
+        marketResearch.setId(1);
+        marketResearch.setCurrentCRM("MS CRM 2009");
+        marketResearch.setCurrentDMS("Sharepoint 2007");
+
+        return marketResearch;
     }
 }
