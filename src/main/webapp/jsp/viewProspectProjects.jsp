@@ -10,20 +10,25 @@
             </s:form>
         </p>
 
-       Projects here
+        Projects here
 
-       <p>
-           I'll put a list of the projects here so we can see a heads-up on whats going on.
+        <p>
+            <d:table name="${actionBean.prospect.projects}" id="contact" requestURI=""
+                     defaultsort="1" >
+                <d:column title="Project Type" property="type"
+                          sortable="true" />
+                <d:column title="Project Value" property="value"
+                          sortable="true" />
+            </d:table>
+        </p>
 
-       </p>
+        <p>
+            I'll also use this page for work with existing customers. Say for example you've won a client
+            years ago, and they want to do a big upgrade project, you can log it here so it adds onto your
+            sales-tracker activity scores/income projections
+        </p>
 
-       <p>
-           I'll also use this page for work with existing customers. Say for example you've won a client
-           years ago, and they want to do a big upgrade project, you can log it here so it adds onto your
-           sales-tracker activity scores/income projections
-       </p>
-
-</stripes:layout-component>
+    </stripes:layout-component>
 </stripes:layout-render>
 
 
