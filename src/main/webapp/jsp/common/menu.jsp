@@ -4,8 +4,8 @@
     <s:link beanclass="com.jameselsey.salestracker.action.DashboardAction" class="navLink">
         Dashboard
     </s:link> |
-    <s:link beanclass="com.jameselsey.salestracker.action.CustomerSearchAction" class="navLink">
-        Customer Search
+    <s:link beanclass="com.jameselsey.salestracker.action.ClientSearchAction" class="navLink">
+        Client Search
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.MarketResearchAction" class="navLink">
         Market Research

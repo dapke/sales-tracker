@@ -5,9 +5,9 @@
 
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewProspectAction" >
-                <s:hidden name="prospectId" />
-                <jsp:include page="/jsp/common/menuProspect.jsp"/>
+            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
+                <s:hidden name="clientId" />
+                <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
         <p>
@@ -16,23 +16,23 @@
 
                         <tr>
                             <td>Name : </td>
-                            <td>${actionBean.prospect.name}</td>
+                            <td>${actionBean.client.name}</td>
                         </tr>
                         <tr>
                             <td>Sector : </td>
-                            <td>${actionBean.prospect.sector}</td>
+                            <td>${actionBean.client.sector}</td>
                         </tr>
                         <tr>
                             <td>County : </td>
-                            <td>${actionBean.prospect.county}</td>
+                            <td>${actionBean.client.county}</td>
                         </tr>
                         <tr>
                             <td>Postcode : </td>
-                            <td>${actionBean.prospect.postcode}</td>
+                            <td>${actionBean.client.postcode}</td>
                         </tr>
                         <tr>
                             <td>Main Phone Number : </td>
-                            <td>${actionBean.prospect.mainPhoneNumber}</td>
+                            <td>${actionBean.client.mainPhoneNumber}</td>
                         </tr>
 
                     </table>
@@ -40,7 +40,7 @@
 
               
                     <p>
-                        <d:table name="${actionBean.prospect.contacts}" id="contact" requestURI=""
+                        <d:table name="${actionBean.client.contacts}" id="contact" requestURI=""
                                  defaultsort="1" >
                             <d:column title="Last name" property="lastName"
                                       sortable="true" />
@@ -49,7 +49,7 @@
                         </d:table>
                     </p>
                     <p>
-                        <d:table name="${actionBean.prospect.projects}" id="project" requestURI=""
+                        <d:table name="${actionBean.client.projects}" id="project" requestURI=""
                                  defaultsort="1" >
                             <d:column title="Project Type" property="type"
                                       sortable="true" />
@@ -63,7 +63,7 @@
                     </p>
 
                     <p>
-                        Quick overview of recent contacts, so when you view the prospect you can see straight
+                        Quick overview of recent contacts, so when you view the client you can see straight
                         away the most recent conversations etc
                     </p>
     </stripes:layout-component>
