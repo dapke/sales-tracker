@@ -55,4 +55,9 @@ public class ViewProspectAction extends BaseAction
           return new ForwardResolution("/jsp/viewProspectProjects.jsp");
     }
 
+    public Resolution viewProspectMarketResearch()
+    {
+        return new ForwardResolution("/jsp/viewProspectMarketResearch.jsp");
+    }
+
 }
