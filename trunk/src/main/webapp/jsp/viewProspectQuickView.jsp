@@ -48,6 +48,15 @@
                                       sortable="true" />
                         </d:table>
                     </p>
+                    <p>
+                        <d:table name="${actionBean.prospect.projects}" id="project" requestURI=""
+                                 defaultsort="1" >
+                            <d:column title="Project Type" property="type"
+                                      sortable="true" />
+                            <d:column title="Project Value" property="value"
+                                      sortable="true" />
+                        </d:table>
+                    </p>
 
                     <p>
                         List of projects on the boards, quick overview of important details/scoring

@@ -17,6 +17,7 @@ public class Prospect
     private String websiteURL;
     private String mainPhoneNumber;
     private List<Contact> contacts;
+    private List<Project> projects;
 
     public Integer getId()
     {
@@ -138,5 +139,13 @@ public class Prospect
         this.contacts = contacts;
     }
 
-    
+    public List<Project> getProjects()
+    {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects)
+    {
+        this.projects = projects;
+    }
 }

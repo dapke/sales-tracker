@@ -2,6 +2,7 @@ package com.jameselsey.salestracker.mockDao;
 
 import com.jameselsey.salestracker.dao.ProspectDao;
 import com.jameselsey.salestracker.domain.Contact;
+import com.jameselsey.salestracker.domain.Project;
 import com.jameselsey.salestracker.domain.Prospect;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class ProspectMock implements ProspectDao
         prospect1.setMainPhoneNumber("0845 606 6067");
         prospect1.setWebsiteURL("www.suffolk.gov.uk");
         prospect1.setContacts(initialiseContacts());
+        prospect1.setProjects(initialiseProjects());
 
         Prospect prospect2 = new Prospect();
         prospect2.setId(2);
@@ -42,6 +44,7 @@ public class ProspectMock implements ProspectDao
         prospect2.setMainPhoneNumber("0845 743 0430");
         prospect2.setWebsiteURL("www.essex.gov.uk");
         prospect2.setContacts(initialiseContacts());
+        prospect2.setProjects(initialiseProjects());
 
         Prospect prospect3 = new Prospect();
         prospect3.setId(3);
@@ -56,6 +59,7 @@ public class ProspectMock implements ProspectDao
         prospect3.setMainPhoneNumber("01473 382200");
         prospect3.setWebsiteURL("www.suffolk.ac.uk");
         prospect3.setContacts(initialiseContacts());
+        prospect3.setProjects(initialiseProjects());
 
         Prospect prospect4 = new Prospect();
         prospect4.setId(4);
@@ -70,6 +74,7 @@ public class ProspectMock implements ProspectDao
         prospect4.setMainPhoneNumber("01223 717 111");
         prospect4.setWebsiteURL("www.cambridgeshire.gov.uk");
         prospect4.setContacts(initialiseContacts());
+        prospect4.setProjects(initialiseProjects());
 
         Prospect prospect5 = new Prospect();
         prospect5.setId(5);
@@ -84,6 +89,7 @@ public class ProspectMock implements ProspectDao
         prospect5.setMainPhoneNumber("01473 432000");
         prospect5.setWebsiteURL("www.ipswich.gov.uk");
         prospect5.setContacts(initialiseContacts());
+        prospect5.setProjects(initialiseProjects());
 
         Prospect prospect6 = new Prospect();
         prospect6.setId(6);
@@ -98,6 +104,7 @@ public class ProspectMock implements ProspectDao
         prospect6.setMainPhoneNumber("01787 372 331");
         prospect6.setWebsiteURL("www.sudburytowncouncil.co.uk");
         prospect6.setContacts(initialiseContacts());
+        prospect6.setProjects(initialiseProjects());
 
         Prospect prospect7 = new Prospect();
         prospect7.setId(7);
@@ -112,6 +119,7 @@ public class ProspectMock implements ProspectDao
         prospect7.setMainPhoneNumber("0845 271 3333");
         prospect7.setWebsiteURL("www.anglia.ac.uk");
         prospect7.setContacts(initialiseContacts());
+        prospect7.setProjects(initialiseProjects());
 
         Prospect prospect8 = new Prospect();
         prospect8.setId(8);
@@ -126,6 +134,7 @@ public class ProspectMock implements ProspectDao
         prospect8.setMainPhoneNumber("01473 218818");
         prospect8.setWebsiteURL("www.orwell-housing.co.uk");
         prospect8.setContacts(initialiseContacts());
+        prospect8.setProjects(initialiseProjects());
 
         prospects.add(prospect1);
         prospects.add(prospect2);
@@ -178,5 +187,27 @@ public class ProspectMock implements ProspectDao
         contacts.add(contact2);
 
         return contacts;
+    }
+
+    public List<Project> initialiseProjects()
+    {
+        Project project1 = new Project();
+
+        project1.setId(1);
+        project1.setType("DMS Install");
+        project1.setValue("£2000");
+
+
+        Project project2 = new Project();
+
+        project2.setId(1);
+        project2.setType("CRM Install");
+        project2.setValue("£7000");
+
+        List<Project> projects = new ArrayList<Project>();
+
+        projects.add(project1);
+        projects.add(project2);
+        return projects;
     }
 }
