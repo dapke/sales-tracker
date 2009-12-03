@@ -5,6 +5,9 @@ import com.jameselsey.salestracker.domain.Contact;
 import com.jameselsey.salestracker.domain.MarketResearch;
 import com.jameselsey.salestracker.domain.Project;
 import com.jameselsey.salestracker.domain.Client;
+import com.jameselsey.salestracker.domain.MarketResearchEducation;
+import com.jameselsey.salestracker.domain.MarketResearchHousing;
+import com.jameselsey.salestracker.domain.MarketResearchLocalGovernment;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +34,7 @@ public class ClientMock implements ClientDao
         client1.setWebsiteURL("www.suffolk.gov.uk");
         client1.setContacts(initialiseContacts());
         client1.setProjects(initialiseProjects());
-        client1.setMarketResearch(initialiseMarketResearch());
+        client1.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client2 = new Client();
         client2.setId(2);
@@ -47,7 +50,7 @@ public class ClientMock implements ClientDao
         client2.setWebsiteURL("www.essex.gov.uk");
         client2.setContacts(initialiseContacts());
         client2.setProjects(initialiseProjects());
-        client2.setMarketResearch(initialiseMarketResearch());
+        client2.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client3 = new Client();
         client3.setId(3);
@@ -63,7 +66,7 @@ public class ClientMock implements ClientDao
         client3.setWebsiteURL("www.suffolk.ac.uk");
         client3.setContacts(initialiseContacts());
         client3.setProjects(initialiseProjects());
-        client3.setMarketResearch(initialiseMarketResearch());
+        client3.setMarketResearch(initialiseMarketResearchForEducation());
 
         Client client4 = new Client();
         client4.setId(4);
@@ -79,7 +82,7 @@ public class ClientMock implements ClientDao
         client4.setWebsiteURL("www.cambridgeshire.gov.uk");
         client4.setContacts(initialiseContacts());
         client4.setProjects(initialiseProjects());
-        client4.setMarketResearch(initialiseMarketResearch());
+        client4.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client5 = new Client();
         client5.setId(5);
@@ -95,7 +98,7 @@ public class ClientMock implements ClientDao
         client5.setWebsiteURL("www.ipswich.gov.uk");
         client5.setContacts(initialiseContacts());
         client5.setProjects(initialiseProjects());
-        client5.setMarketResearch(initialiseMarketResearch());
+        client5.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client6 = new Client();
         client6.setId(6);
@@ -111,7 +114,7 @@ public class ClientMock implements ClientDao
         client6.setWebsiteURL("www.sudburytowncouncil.co.uk");
         client6.setContacts(initialiseContacts());
         client6.setProjects(initialiseProjects());
-        client6.setMarketResearch(initialiseMarketResearch());
+        client6.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client7 = new Client();
         client7.setId(7);
@@ -127,7 +130,7 @@ public class ClientMock implements ClientDao
         client7.setWebsiteURL("www.anglia.ac.uk");
         client7.setContacts(initialiseContacts());
         client7.setProjects(initialiseProjects());
-        client7.setMarketResearch(initialiseMarketResearch());
+        client7.setMarketResearch(initialiseMarketResearchForEducation());
 
         Client client8 = new Client();
         client8.setId(8);
@@ -143,7 +146,7 @@ public class ClientMock implements ClientDao
         client8.setWebsiteURL("www.orwell-housing.co.uk");
         client8.setContacts(initialiseContacts());
         client8.setProjects(initialiseProjects());
-        client8.setMarketResearch(initialiseMarketResearch());
+        client8.setMarketResearch(initialiseMarketResearchForHousing());
 
         clients.add(client1);
         clients.add(client2);
@@ -220,13 +223,44 @@ public class ClientMock implements ClientDao
         return projects;
     }
 
-    public MarketResearch initialiseMarketResearch()
+
+    public MarketResearch initialiseMarketResearchForHousing()
     {
         MarketResearch marketResearch = new MarketResearch();
 
         marketResearch.setId(1);
-        marketResearch.setCurrentHousingSystem("Microsoft Housing Systems");
-        marketResearch.setCurrentStudentServicesSystem("Apple STU-Services");
+        marketResearch.setMarketResearchHousing(new MarketResearchHousing());
+        marketResearch.getMarketResearchHousing().setCurrentDMS("MS DMS");
+        marketResearch.getMarketResearchHousing().setCurrentCRM("MS CRM");
+        marketResearch.getMarketResearchHousing().setNumberOfTenants(43000);
+        marketResearch.getMarketResearchHousing().setSocialHousingStock(7000);
+        marketResearch.getMarketResearchHousing().setStarRating(3);
+
+        return marketResearch;
+    }
+
+    public MarketResearch initialiseMarketResearchForEducation()
+    {
+        MarketResearch marketResearch = new MarketResearch();
+
+        marketResearch.setId(1);
+        marketResearch.setNumberOfStaff(220);
+        marketResearch.setMarketResearchEducation(new MarketResearchEducation());
+        marketResearch.getMarketResearchEducation().setCurrentDMS("MS DMS");
+        marketResearch.getMarketResearchEducation().setCurrentStudentRegistrySystem("STU-Reg");
+        marketResearch.getMarketResearchEducation().setNumberOfCampuses(3);
+        marketResearch.getMarketResearchEducation().setNumberOfCoursesOffered(89);
+
+        return marketResearch;
+    }
+
+    public MarketResearch initialiseMarketResearchForLocalGovernment()
+    {
+        MarketResearch marketResearch = new MarketResearch();
+
+        marketResearch.setId(1);
+        marketResearch.setMarketResearchLocalGovernment(new MarketResearchLocalGovernment());
+        marketResearch.getMarketResearchLocalGovernment().setCurrentDMS("MS DMS");
 
         return marketResearch;
     }
