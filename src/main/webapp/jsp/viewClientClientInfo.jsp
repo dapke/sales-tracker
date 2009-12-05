@@ -10,50 +10,56 @@
             </s:form>
         </p>
 
- <table>
+        <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction">
+        <table>
             <tr>
                 <td>Name : </td>
-                <td>${actionBean.client.name}</td>
+                <td><s:text name="client.name"/></td>
             </tr>
             <tr>
                 <td>Sector : </td>
-                <td>${actionBean.client.sector}</td>
+                <td><s:text name="client.sector"/></td>
             </tr>
             <tr>
                 <td>Address Line 1 : </td>
-                <td>${actionBean.client.address1}</td>
+                <td><s:text name="client.address1"/></td>
             </tr>
             <tr>
                 <td>Address Line 2 : </td>
-                <td>${actionBean.client.address2}</td>
+                <td><s:text name="client.address2"/></td>
             </tr>
             <tr>
                 <td>Town : </td>
-                <td>${actionBean.client.town}</td>
+                <td><s:text name="client.town"/></td>
             </tr>
             <tr>
                 <td>County : </td>
-                <td>${actionBean.client.county}</td>
+                <td><s:text name="client.county"/></td>
             </tr>
             <tr>
                 <td>Postcode : </td>
-                <td>${actionBean.client.postcode}</td>
+                <td><s:text name="client.postcode"/></td>
             </tr>
             <tr>
                 <td>Country : </td>
-                <td>${actionBean.client.country}</td>
+                <td><s:text name="client.country"/></td>
             </tr>
             <tr>
                 <td>Website : </td>
-                <td>${actionBean.client.websiteURL}</td>
+                <td><s:text name="client.websiteURL"/></td>
             </tr>
             <tr>
                 <td>Main Phone Number : </td>
-                <td>${actionBean.client.mainPhoneNumber}</td>
+                <td><s:text name="client.mainPhoneNumber"/></td>
             </tr>
-
+            <tr>
+                <td>
+                    <s:submit name="save" value="save"/>
+                </td>
+            </tr>
         </table>
-
+            <s:hidden name="clientId" />
+        </s:form>
             <p>
                 I'll put some more info here about the client, probably market research info. Hopefully
                 I'll be able to integrate google maps and have a map showing the location by using the postcode
