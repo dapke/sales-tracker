@@ -53,7 +53,7 @@
                                  defaultsort="1" >
                             <d:column title="Project Type" property="type"
                                       sortable="true" />
-                            <d:column title="Project Value" property="value"
+                            <d:column title="Project Value" property="projectValue"
                                       sortable="true" />
                         </d:table>
                     </p>

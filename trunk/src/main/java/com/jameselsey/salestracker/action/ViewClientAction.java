@@ -6,6 +6,7 @@ import java.util.List;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.integration.spring.SpringBean;
 
 /**
  *
@@ -14,28 +15,72 @@ import net.sourceforge.stripes.action.Resolution;
 public class ViewClientAction extends BaseAction
 {
 
-    ClientService clientService = new ClientService();
+    @SpringBean
+    ClientService clientService;// = new ClientService();
     private Integer clientId;
+    private Client client;
+    private Client clientA;
+
+
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
+    
+    public Integer getClientId()
+    {
+        return clientId;
+    }
 
     public void setClientId(Integer clientId)
     {
         this.clientId = clientId;
     }
 
+    
+
+    
+
+    public Client getClientA()
+    {
+//        Client c = clientService.getClientById(clientId);
+        return clientA;
+    }
+
+    public void setClientA(Client clientA)
+    {
+        this.clientA = clientA;
+    }
+
+
+
     public Client getClient()
     {
-        Client c = clientService.getClientById(clientId);
-        return c;
+        return client;
     }
 
     @DefaultHandler
     public Resolution quickView()
     {
+        clientA = clientService.getClientById(clientId);
+        client = clientService.getClientById(clientId);
+
         return new ForwardResolution("/jsp/viewClientQuickView.jsp");
+    }
+
+    public Resolution save()
+    {
+
+
+        clientService.persistClient(client);
+        return new ForwardResolution("/jsp/reports.jsp");
     }
 
     public Resolution viewClientInfo()
     {
+        client = clientService.getClientById(clientId);
+
         return new ForwardResolution("/jsp/viewClientClientInfo.jsp");
     }
 
@@ -52,5 +97,15 @@ public class ViewClientAction extends BaseAction
     public Resolution viewClientMarketResearch()
     {
         return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
+    }
+
+    public ClientService getClientService()
+    {
+        return clientService;
+    }
+
+    public void setClientService(ClientService clientService)
+    {
+        this.clientService = clientService;
     }
 }

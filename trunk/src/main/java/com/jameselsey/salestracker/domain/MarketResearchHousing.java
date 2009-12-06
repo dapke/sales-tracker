@@ -1,14 +1,28 @@
 package com.jameselsey.salestracker.domain;
 
-public class MarketResearchHousing
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class MarketResearchHousing implements Serializable
 {
 
+    @Id
+    @GeneratedValue
     private Integer id;
+    @Column
     private Integer socialHousingStock;
+    @Column
     private Integer numberOfTenants;
+    @Column
     private Integer starRating;
 
+    @Column
     private String currentDMS;
+    @Column
     private String currentCRM;
 
     public String getCurrentCRM()

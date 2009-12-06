@@ -1,10 +1,25 @@
 package com.jameselsey.salestracker.domain;
 
-public class Project
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Project implements Serializable
 {
+    @Id
+    @GeneratedValue
     private Integer id;
+    @Column
     private String type;
-    private String value;
+    @Column
+    private String projectValue;
+
+    @ManyToOne
+    private Client client;
 
     public Integer getId()
     {
@@ -26,15 +41,27 @@ public class Project
         this.type = type;
     }
 
-    public String getValue()
+    public String getProjectValue()
     {
-        return value;
+        return projectValue;
     }
 
-    public void setValue(String value)
+    public void setProjectValue(String projectValue)
     {
-        this.value = value;
+        this.projectValue = projectValue;
     }
+
+    public Client getClient()
+    {
+        return client;
+    }
+
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
+
 
     
 }

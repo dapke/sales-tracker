@@ -2,11 +2,30 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
  xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
  http://www.springframework.org/schema/context
- http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ http://www.springframework.org/schema/context/spring-context-2.5.xsd
+ http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
    
-    <context:component-scan base-package="com.jameselsey.salestracker.mockDao" />
+    <!--<context:component-scan base-package="com.jameselsey.salestracker" />-->
+    <context:annotation-config/>
+    <bean id="clientDao" class="com.jameselsey.salestracker.mockDao.ClientMock">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
 
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <tx:annotation-driven/>
+    
+    <bean id="clientService" class="com.jameselsey.salestracker.service.ClientService"/>
+            
 </beans>

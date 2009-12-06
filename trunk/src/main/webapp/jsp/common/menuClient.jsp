@@ -5,11 +5,14 @@
             event="quickView" class="navLink">
         Quick View
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
+        <stripes:param name="clientA" value="${actionBean.clientA}"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientInfo" class="navLink">
         Client
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
+        <stripes:param name="clientA" value="${actionBean.clientA}"/>
+        <stripes:param name="client" value="${actionBean.client}"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientContacts" class="navLink">

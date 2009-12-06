@@ -6,6 +6,7 @@ import java.util.List;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.integration.spring.SpringBean;
 
 /**
  *
@@ -14,7 +15,8 @@ import net.sourceforge.stripes.action.Resolution;
 public class ClientSearchAction extends BaseAction
 {
 
-    ClientService clientService = new ClientService();
+    @SpringBean
+    private ClientService clientService;// = new ClientService();
 
     public List<Client> getClients()
     {

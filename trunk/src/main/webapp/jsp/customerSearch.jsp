@@ -16,6 +16,7 @@
                     <td><stripes:link beanclass="com.jameselsey.salestracker.action.ViewClientAction">
                              View
                             <stripes:param name="clientId" value="${client.id}"/>
+                            
                         </stripes:link>
                     </td>
                 </tr>
