@@ -11,7 +11,7 @@
         </p>
 
         <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction">
-            <s:hidden name="clientA" value="${actionBean.clientA}"/>
+            <s:hidden name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>
             <s:hidden name="clientId" value="${actionBean.clientId}"/>
             <s:hidden name="client.id"/>
 
