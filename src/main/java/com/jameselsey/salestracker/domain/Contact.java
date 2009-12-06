@@ -1,13 +1,28 @@
 package com.jameselsey.salestracker.domain;
 
-public class Contact
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Contact implements Serializable
 {
+    @Id
+    @GeneratedValue
     private Integer id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @Column
     private String jobRole;
+    @Column
     private String deskPhone;
+    @Column
     private String mobilePhone;
+    @Column
     private String emailAddress;
 
     public String getDeskPhone()

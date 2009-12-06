@@ -1,14 +1,30 @@
 package com.jameselsey.salestracker.domain;
 
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-public class MarketResearch
+
+
+@Entity
+public class MarketResearch implements Serializable
 {
 
+
+    @Id
+    @GeneratedValue
     private Integer id;
+    @Column
     private Integer numberOfStaff;
     
+    @OneToOne(optional=true)
     private MarketResearchEducation marketResearchEducation;
+    @OneToOne(optional=true)
     private MarketResearchHousing marketResearchHousing;
+    @OneToOne(optional=true)
     private MarketResearchLocalGovernment marketResearchLocalGovernment;
 
 
@@ -61,6 +77,8 @@ public class MarketResearch
     {
         this.marketResearchLocalGovernment = marketResearchLocalGovernment;
     }
+
+
 
 
 

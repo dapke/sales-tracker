@@ -1,9 +1,19 @@
 package com.jameselsey.salestracker.domain;
 
-public class MarketResearchLocalGovernment
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class MarketResearchLocalGovernment implements Serializable
 {
+    @Id
+    @GeneratedValue
     private Integer id;
     
+    @Column
     private String currentDMS;
 
     public String getCurrentDMS()

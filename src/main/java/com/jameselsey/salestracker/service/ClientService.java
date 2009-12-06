@@ -4,19 +4,34 @@ import com.jameselsey.salestracker.dao.ClientDao;
 import com.jameselsey.salestracker.domain.Client;
 import com.jameselsey.salestracker.mockDao.ClientMock;
 import java.util.List;
+import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 public class ClientService
 {
 
-    ClientDao clientDao = new ClientMock();
+    private ClientDao clientDao;// = new ClientMock();
 
+    @Resource
+    @Required
+    public void setClientDao(ClientDao clientDao)
+    {
+        this.clientDao = clientDao;
+    }
     public List<Client> fetchClients()
     {
 
-        return clientDao.fetchClients();
+        return clientDao.getAllClients();
     }
     public Client getClientById(Integer clientId)
     {
         return clientDao.getClientById(clientId);
+    }
+
+    public void persistClient(Client client)
+    {
+        clientDao.persistClient(client);
     }
 }

@@ -1,6 +1,7 @@
 package com.jameselsey.salestracker.mockDao;
 
 import com.jameselsey.salestracker.dao.ClientDao;
+import com.jameselsey.salestracker.dao.JpaDao;
 import com.jameselsey.salestracker.domain.Contact;
 import com.jameselsey.salestracker.domain.MarketResearch;
 import com.jameselsey.salestracker.domain.Project;
@@ -9,11 +10,17 @@ import com.jameselsey.salestracker.domain.MarketResearchEducation;
 import com.jameselsey.salestracker.domain.MarketResearchHousing;
 import com.jameselsey.salestracker.domain.MarketResearchLocalGovernment;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class ClientMock implements ClientDao
+import java.util.Map;
+import org.springframework.stereotype.Repository;
+import org.stripesstuff.stripersist.Stripersist;
+
+public class ClientMock extends JpaDao implements ClientDao
 {
 
+    @Override
     public List<Client> fetchClients()
     {
 
@@ -32,9 +39,9 @@ public class ClientMock implements ClientDao
         client1.setCountry("England");
         client1.setMainPhoneNumber("0845 606 6067");
         client1.setWebsiteURL("www.suffolk.gov.uk");
-        client1.setContacts(initialiseContacts());
-        client1.setProjects(initialiseProjects());
-        client1.setMarketResearch(initialiseMarketResearchForLocalGovernment());
+//        client1.setContacts(initialiseContacts());
+//        client1.setProjects(initialiseProjects());
+//        client1.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client2 = new Client();
         client2.setId(2);
@@ -48,9 +55,9 @@ public class ClientMock implements ClientDao
         client2.setCountry("England");
         client2.setMainPhoneNumber("0845 743 0430");
         client2.setWebsiteURL("www.essex.gov.uk");
-        client2.setContacts(initialiseContacts());
-        client2.setProjects(initialiseProjects());
-        client2.setMarketResearch(initialiseMarketResearchForLocalGovernment());
+//        client2.setContacts(initialiseContacts());
+//        client2.setProjects(initialiseProjects());
+//        client2.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client3 = new Client();
         client3.setId(3);
@@ -64,9 +71,9 @@ public class ClientMock implements ClientDao
         client3.setCountry("England");
         client3.setMainPhoneNumber("01473 382200");
         client3.setWebsiteURL("www.suffolk.ac.uk");
-        client3.setContacts(initialiseContacts());
-        client3.setProjects(initialiseProjects());
-        client3.setMarketResearch(initialiseMarketResearchForEducation());
+//        client3.setContacts(initialiseContacts());
+//        client3.setProjects(initialiseProjects());
+//        client3.setMarketResearch(initialiseMarketResearchForEducation());
 
         Client client4 = new Client();
         client4.setId(4);
@@ -80,9 +87,9 @@ public class ClientMock implements ClientDao
         client4.setCountry("England");
         client4.setMainPhoneNumber("01223 717 111");
         client4.setWebsiteURL("www.cambridgeshire.gov.uk");
-        client4.setContacts(initialiseContacts());
-        client4.setProjects(initialiseProjects());
-        client4.setMarketResearch(initialiseMarketResearchForLocalGovernment());
+//        client4.setContacts(initialiseContacts());
+//        client4.setProjects(initialiseProjects());
+//        client4.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client5 = new Client();
         client5.setId(5);
@@ -96,9 +103,9 @@ public class ClientMock implements ClientDao
         client5.setCountry("England");
         client5.setMainPhoneNumber("01473 432000");
         client5.setWebsiteURL("www.ipswich.gov.uk");
-        client5.setContacts(initialiseContacts());
-        client5.setProjects(initialiseProjects());
-        client5.setMarketResearch(initialiseMarketResearchForLocalGovernment());
+//        client5.setContacts(initialiseContacts());
+//        client5.setProjects(initialiseProjects());
+//        client5.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client6 = new Client();
         client6.setId(6);
@@ -112,9 +119,9 @@ public class ClientMock implements ClientDao
         client6.setCountry("England");
         client6.setMainPhoneNumber("01787 372 331");
         client6.setWebsiteURL("www.sudburytowncouncil.co.uk");
-        client6.setContacts(initialiseContacts());
-        client6.setProjects(initialiseProjects());
-        client6.setMarketResearch(initialiseMarketResearchForLocalGovernment());
+//        client6.setContacts(initialiseContacts());
+//        client6.setProjects(initialiseProjects());
+//        client6.setMarketResearch(initialiseMarketResearchForLocalGovernment());
 
         Client client7 = new Client();
         client7.setId(7);
@@ -128,9 +135,9 @@ public class ClientMock implements ClientDao
         client7.setCountry("England");
         client7.setMainPhoneNumber("0845 271 3333");
         client7.setWebsiteURL("www.anglia.ac.uk");
-        client7.setContacts(initialiseContacts());
-        client7.setProjects(initialiseProjects());
-        client7.setMarketResearch(initialiseMarketResearchForEducation());
+//        client7.setContacts(initialiseContacts());
+//        client7.setProjects(initialiseProjects());
+//        client7.setMarketResearch(initialiseMarketResearchForEducation());
 
         Client client8 = new Client();
         client8.setId(8);
@@ -144,9 +151,7 @@ public class ClientMock implements ClientDao
         client8.setCountry("England");
         client8.setMainPhoneNumber("01473 218818");
         client8.setWebsiteURL("www.orwell-housing.co.uk");
-        client8.setContacts(initialiseContacts());
-        client8.setProjects(initialiseProjects());
-        client8.setMarketResearch(initialiseMarketResearchForHousing());
+//        client8.setMarketResearch(initialiseMarketResearchForHousing());
 
         clients.add(client1);
         clients.add(client2);
@@ -158,24 +163,27 @@ public class ClientMock implements ClientDao
         clients.add(client8);
 
 
+
+
         return clients;
     }
 
-    public Client getClientById(Integer clientId)
-    {
-        List<Client> lp = fetchClients();
-
-        //Subtracting 1 because list starts from 0,
-        //Shoddy workaround, but will fix that when I do proper DAO implementations ;)
-        return lp.get(clientId - 1);
-
-    }
+//    @Override
+//    public Client getClientById(Integer clientId)
+//    {
+//        List<Client> lp = fetchClients();
+//
+//        //Subtracting 1 because list starts from 0,
+//        //Shoddy workaround, but will fix that when I do proper DAO implementations ;)
+//        return lp.get(clientId - 1);
+//
+//    }
 
     public List<Contact> initialiseContacts()
     {
         Contact contact1 = new Contact();
 
-        contact1.setId(1);
+//        contact1.setId(1);
         contact1.setFirstName("Dave");
         contact1.setLastName("Smith");
         contact1.setJobRole("IT Manager");
@@ -185,7 +193,7 @@ public class ClientMock implements ClientDao
 
         Contact contact2 = new Contact();
 
-        contact2.setId(2);
+//        contact2.setId(2);
         contact2.setFirstName("John");
         contact2.setLastName("Blackmouth");
         contact2.setJobRole("Finance Directory");
@@ -207,14 +215,14 @@ public class ClientMock implements ClientDao
 
         project1.setId(1);
         project1.setType("Housing System Install");
-        project1.setValue("£2000");
+        project1.setProjectValue("£2000");
 
 
         Project project2 = new Project();
 
         project2.setId(1);
         project2.setType("Student Services Install");
-        project2.setValue("£7000");
+        project2.setProjectValue("£7000");
 
         List<Project> projects = new ArrayList<Project>();
 
@@ -222,7 +230,6 @@ public class ClientMock implements ClientDao
         projects.add(project2);
         return projects;
     }
-
 
     public MarketResearch initialiseMarketResearchForHousing()
     {
@@ -263,5 +270,50 @@ public class ClientMock implements ClientDao
         marketResearch.getMarketResearchLocalGovernment().setCurrentDMS("MS DMS");
 
         return marketResearch;
+    }
+
+//    EntityManager em = Stripersist.getEntityManager();
+    @Override
+    public void persistClient(Client client)
+    {
+
+        System.out.println("break");
+//        client.setId(null);
+//        client.setProjects(null);
+//        client.setContacts(null);
+//        client.setMarketResearch(null);
+        if (client.getId() != null) {
+            getJpaTemplate().merge(client);
+            getJpaTemplate().flush();
+        } else {
+            getJpaTemplate().persist(client);
+        }
+
+
+    }
+
+    @Override
+    public List<Client> getAllClients()
+    {
+        String jpql = "SELECT c " +
+                "FROM com.jameselsey.salestracker.domain.Client c";
+
+        List<Client> clients = getJpaTemplate().find(jpql);
+        return clients;
+    }
+
+    @Override
+    public Client getClientById(Integer clientId)
+    {
+
+        String jpql = "SELECT c " +
+                "FROM com.jameselsey.salestracker.domain.Client c "+
+                "WHERE c.id = " + clientId;
+
+        Map params = new HashMap();
+        params.put(params, params);
+
+        Client c = (Client) getJpaTemplate().find(jpql).get(0);
+        return c;
     }
 }
