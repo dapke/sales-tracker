@@ -2,7 +2,6 @@ package com.jameselsey.salestracker.service;
 
 import com.jameselsey.salestracker.dao.ClientDao;
 import com.jameselsey.salestracker.domain.Client;
-import com.jameselsey.salestracker.mockDao.ClientMock;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Required;
@@ -12,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ClientService
 {
 
-    private ClientDao clientDao;// = new ClientMock();
+    private ClientDao clientDao;
 
     @Resource
     @Required

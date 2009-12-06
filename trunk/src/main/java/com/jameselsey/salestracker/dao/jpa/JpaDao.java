@@ -1,4 +1,4 @@
-package com.jameselsey.salestracker.dao;
+package com.jameselsey.salestracker.dao.jpa;
 
 import java.util.List;
 import java.util.Map;

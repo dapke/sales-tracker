@@ -16,7 +16,7 @@ public class ClientSearchAction extends BaseAction
 {
 
     @SpringBean
-    private ClientService clientService;// = new ClientService();
+    private ClientService clientService;
 
     public List<Client> getClients()
     {
