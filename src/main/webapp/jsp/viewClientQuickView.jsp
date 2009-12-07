@@ -10,6 +10,7 @@
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
+        <s:messages/>
         <p>
 
                     <table>

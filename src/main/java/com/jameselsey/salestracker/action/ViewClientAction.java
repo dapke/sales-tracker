@@ -6,6 +6,7 @@ import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.SimpleMessage;
 import net.sourceforge.stripes.integration.spring.SpringBean;
 
 /**
@@ -60,12 +61,15 @@ public class ViewClientAction extends BaseAction
         clientBeforeChanges = clientService.getClientById(clientId);
         client = clientService.getClientById(clientId);
 
+        
+
         return new ForwardResolution("/jsp/viewClientQuickView.jsp");
     }
 
     public Resolution save()
     {
         clientService.persistClient(client);
+        getContext().getMessages().add( new SimpleMessage("{0} updated", client.getName()));
         return new RedirectResolution(ViewClientAction.class).flash(this);
     }
 
