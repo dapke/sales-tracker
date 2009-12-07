@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Contact implements Serializable
@@ -12,6 +14,7 @@ public class Contact implements Serializable
     @Id
     @GeneratedValue
     private Integer id;
+
     @Column
     private String firstName;
     @Column
@@ -24,6 +27,10 @@ public class Contact implements Serializable
     private String mobilePhone;
     @Column
     private String emailAddress;
+
+    @ManyToOne
+    private Client client;
+
 
     public String getDeskPhone()
     {
@@ -94,6 +101,18 @@ public class Contact implements Serializable
     {
         this.mobilePhone = mobilePhone;
     }
+
+    public Client getClient()
+    {
+        return client;
+    }
+
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
+
 
 
 }

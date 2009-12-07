@@ -1,7 +1,10 @@
 package com.jameselsey.salestracker.domain;
 
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,7 +41,7 @@ public class Client implements Serializable
     @Column
     private String mainPhoneNumber;
     
-    @Transient
+    @OneToMany(mappedBy="client")
     private List<Contact> contacts;
     @Transient
     private List<Project> projects;
@@ -156,15 +159,6 @@ public class Client implements Serializable
         this.postcode = postcode;
     }
 
-    public List<Contact> getContacts()
-    {
-        return contacts;
-    }
-
-    public void setContacts(List<Contact> contacts)
-    {
-        this.contacts = contacts;
-    }
 
     public List<Project> getProjects()
     {
@@ -185,6 +179,17 @@ public class Client implements Serializable
     {
         this.marketResearch = marketResearch;
     }
+
+    public Collection<Contact> getContacts()
+    {
+        return contacts;
+    }
+
+    public void setContacts(List<Contact> contacts)
+    {
+        this.contacts = contacts;
+    }
+
 
 
 }

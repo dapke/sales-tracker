@@ -4,6 +4,7 @@ import com.jameselsey.salestracker.domain.Client;
 import com.jameselsey.salestracker.service.ClientService;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
+import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.integration.spring.SpringBean;
 
@@ -65,7 +66,7 @@ public class ViewClientAction extends BaseAction
     public Resolution save()
     {
         clientService.persistClient(client);
-        return new ForwardResolution("/jsp/reports.jsp");
+        return new RedirectResolution(ViewClientAction.class).flash(this);
     }
 
     public Resolution viewClientInfo()
