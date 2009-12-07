@@ -18,6 +18,7 @@
             event="viewClientContacts" class="navLink">
         Contacts
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
+        <stripes:param name="client" value="${actionBean.client}"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientMarketResearch" class="navLink">

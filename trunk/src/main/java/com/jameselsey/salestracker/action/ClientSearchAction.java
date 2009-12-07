@@ -20,7 +20,9 @@ public class ClientSearchAction extends BaseAction
 
     public List<Client> getClients()
     {
-        return clientService.fetchClients();
+        List<Client> l = clientService.fetchClients();
+//        return clientService.fetchClients();
+        return l;
     }
 
     @DefaultHandler
