@@ -58,7 +58,7 @@ public class ViewClientAction extends BaseAction
     @DefaultHandler
     public Resolution quickView()
     {
-        clientBeforeChanges = clientService.getClientById(clientId);
+//        clientBeforeChanges = clientService.getClientById(clientId);
         client = clientService.getClientById(clientId);
 
         
@@ -68,6 +68,7 @@ public class ViewClientAction extends BaseAction
 
     public Resolution save()
     {
+        clientBeforeChanges = clientService.getClientById(clientId);
         clientService.persistClient(client);
         getContext().getMessages().add( new SimpleMessage("{0} updated", client.getName()));
         return new RedirectResolution(ViewClientAction.class).flash(this);
@@ -81,6 +82,7 @@ public class ViewClientAction extends BaseAction
 
     public Resolution viewClientContacts()
     {
+        System.out.println("test");
         return new ForwardResolution("/jsp/viewClientContacts.jsp");
     }
 

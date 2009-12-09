@@ -5,20 +5,20 @@
             event="quickView" class="navLink">
         Quick View
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
-        <stripes:param name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>
+        <%--<stripes:param name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>--%>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientInfo" class="navLink">
         Client
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
-        <stripes:param name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>
-        <stripes:param name="client" value="${actionBean.client}"/>
+        <%--<stripes:param name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>--%>
+        <%--<stripes:param name="client" value="${actionBean.client}"/>--%>
     </s:link> |
-    <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
-            event="viewClientContacts" class="navLink">
+    <s:link beanclass="com.jameselsey.salestracker.action.EditContactAction"
+             class="navLink">
         Contacts
         <stripes:param name="clientId" value="${actionBean.client.id}"/>
-        <stripes:param name="client" value="${actionBean.client}"/>
+        <%--<stripes:param name="client" value="${actionBean.client}"/>--%>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientMarketResearch" class="navLink">
