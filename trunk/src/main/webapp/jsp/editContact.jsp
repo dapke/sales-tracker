@@ -5,17 +5,15 @@
 
         <p>
             <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
-                <s:hidden name="clientId" />
+
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
 
-        <s:form beanclass="com.jameselsey.salestracker.action.EditContactAction">
-            <s:hidden name="clientBeforeChanges" value="${actionBean.clientBeforeChanges}"/>
+        <s:form beanclass="com.jameselsey.salestracker.action.EditContactAction"
+                action="saveUpdatedContact">
             <s:hidden name="clientId" value="${actionBean.clientId}"/>
-            <s:hidden name="client.id"/>
-            <s:hidden name="contact"/>
-
+            <s:hidden name="contactId" value="${actionBean.contactId}"/>
             <table>
                 <tr>
                     <td>First Name : </td>
@@ -23,11 +21,11 @@
                 </tr>
                 <tr>
                     <td>Last Name : </td>
-                    <td><s:text name="contact.contact"/></td>
+                    <td><s:text name="contact.lastName"/></td>
                 </tr>
                 <tr>
                     <td>
-                        <s:submit name="save" value="save"/>
+                        <%--<s:submit name="save" value="save"/>--%>
                     </td>
                 </tr>
             </table>

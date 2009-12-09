@@ -25,11 +25,17 @@
                           sortable="true" />
                 <d:column title="Email" property="emailAddress"
                           sortable="true" />
-                <d:column title="" value="edit"
-                          sortable="true" />
+                <d:column title="Edit">
+                    <s:link beanclass="com.jameselsey.salestracker.action.EditContactAction"
+                            event="editContact">
+                        Edit
+                        <s:param name="contactId" value="${contact.id}"/>
+                        <s:param name="clientId" value="${actionBean.client.id}"/>
+                    </s:link>
+                </d:column>
 
             </d:table>
-            <s:link beanclass="com.jameselsey.salestracker.action.EditContactAction"/>
+            
         </p>
 
         <p>
