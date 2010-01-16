@@ -17,17 +17,20 @@ public class EditContactAction extends BaseAction
     public Contact contact;
     public Client client;
     public Integer contactId;
-    public Integer clientId;
 
-    public Integer getClientId()
+    private Contact tempContact;
+
+    public Contact getTempContact()
     {
-        return clientId;
+        return tempContact;
     }
 
-    public void setClientId(Integer clientId)
+    public void setTempContact(Contact tempContact)
     {
-        this.clientId = clientId;
+        this.tempContact = tempContact;
     }
+
+ 
 
     public Integer getContactId()
     {
@@ -63,20 +66,22 @@ public class EditContactAction extends BaseAction
     public Resolution viewContacts()
     {
         System.out.println("test");
-        client = clientService.getClientById(clientId);
+        client = clientService.getClientById(client.getId());
         return new ForwardResolution("/jsp/viewClientContacts.jsp");
     }
 
     public Resolution editContact()
     {
-        contact = clientService.getContactById(contactId);
+        tempContact = clientService.getContactById(contactId);
         return new ForwardResolution("/jsp/editContact.jsp");
     }
 
     public Resolution saveUpdatedContact()
     {
         System.out.println("Test");
+
         clientService.persistClient(client);
+
         return new RedirectResolution("/jsp/viewClientQuickView.jsp").flash(this);
     }
 

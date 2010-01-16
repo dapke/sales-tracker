@@ -18,7 +18,7 @@ public class ViewClientAction extends BaseAction
 
     @SpringBean
     ClientService clientService;
-    private Integer clientId;
+//    private Integer clientId;
     private Client client;
     private Client clientBeforeChanges;
 
@@ -37,16 +37,16 @@ public class ViewClientAction extends BaseAction
         this.client = client;
     }
 
-    
-    public Integer getClientId()
-    {
-        return clientId;
-    }
-
-    public void setClientId(Integer clientId)
-    {
-        this.clientId = clientId;
-    }
+//
+//    public Integer getClientId()
+//    {
+//        return clientId;
+//    }
+//
+//    public void setClientId(Integer clientId)
+//    {
+//        this.clientId = clientId;
+//    }
 
 
 
@@ -59,7 +59,7 @@ public class ViewClientAction extends BaseAction
     public Resolution quickView()
     {
 //        clientBeforeChanges = clientService.getClientById(clientId);
-        client = clientService.getClientById(clientId);
+        client = clientService.getClientById(client.getId());
 
         
 
@@ -68,7 +68,7 @@ public class ViewClientAction extends BaseAction
 
     public Resolution save()
     {
-        clientBeforeChanges = clientService.getClientById(clientId);
+        clientBeforeChanges = clientService.getClientById(client.getId());
         clientService.persistClient(client);
         getContext().getMessages().add( new SimpleMessage("{0} updated", client.getName()));
         return new RedirectResolution(ViewClientAction.class).flash(this);
@@ -76,25 +76,18 @@ public class ViewClientAction extends BaseAction
 
     public Resolution viewClientInfo()
     {
-        client = clientService.getClientById(clientId);
+        client = clientService.getClientById(client.getId());
         return new ForwardResolution("/jsp/viewClientClientInfo.jsp");
     }
 
-    public Resolution viewClientContacts()
-    {
-        System.out.println("test");
-        return new ForwardResolution("/jsp/viewClientContacts.jsp");
-    }
+   
 
-    public Resolution viewClientProjects()
-    {
-        return new ForwardResolution("/jsp/viewClientProjects.jsp");
-    }
+//    public Resolution viewClientProjects()
+//    {
+//        return new ForwardResolution("/jsp/viewClientProjects.jsp");
+//    }
 
-    public Resolution viewClientMarketResearch()
-    {
-        return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
-    }
+    
 
     public ClientService getClientService()
     {
