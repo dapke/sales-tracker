@@ -1,27 +1,16 @@
 package com.jameselsey.salestracker.domain;
 
-import java.io.Serializable;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 @Entity
-public class Client implements Serializable
+public class Client extends NamedEntity
 {
 
-    @Id
-    @GeneratedValue
-    private Integer id;
-    @Column
-    private String name;
     @Column
     private String sector;
     @Column
@@ -40,34 +29,14 @@ public class Client implements Serializable
     private String websiteURL;
     @Column
     private String mainPhoneNumber;
-    
-    @OneToMany(mappedBy="client")
+    @OneToMany(mappedBy = "client")
     private List<Contact> contacts;
     @Transient
     private List<Project> projects;
-
     @Transient
     private MarketResearch marketResearch;
 
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer Id)
-    {
-        this.id = Id;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
+   
 
     public String getSector()
     {
@@ -159,7 +128,6 @@ public class Client implements Serializable
         this.postcode = postcode;
     }
 
-
     public List<Project> getProjects()
     {
         return projects;
@@ -189,7 +157,4 @@ public class Client implements Serializable
     {
         this.contacts = contacts;
     }
-
-
-
 }

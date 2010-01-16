@@ -4,12 +4,9 @@
     <stripes:layout-component name="contents">
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
-
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
-            </s:form>
         </p>
-        ${actionBean.tempContact.firstName}
+        
         <s:form beanclass="com.jameselsey.salestracker.action.EditContactAction">
             <s:hidden name="clientId" value="${actionBean.clientId}"/>
             <s:hidden name="contactId" value="${actionBean.contactId}"/>
