@@ -4,10 +4,7 @@
     <stripes:layout-component name="contents">
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
-                <s:hidden name="clientId" />
-                <jsp:include page="/jsp/common/menuClient.jsp"/>
-            </s:form>
+            <jsp:include page="/jsp/common/menuClient.jsp"/>
         </p>
 
         <p>
@@ -35,7 +32,7 @@
                 </d:column>
 
             </d:table>
-            
+
         </p>
 
         <p>

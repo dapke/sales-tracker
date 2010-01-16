@@ -4,10 +4,7 @@
     <stripes:layout-component name="contents">
 
         <p>
-            
-               
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
-            
         </p>
 
         Projects here
