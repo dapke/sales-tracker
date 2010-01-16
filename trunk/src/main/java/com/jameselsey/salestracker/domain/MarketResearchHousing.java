@@ -1,25 +1,18 @@
 package com.jameselsey.salestracker.domain;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
-public class MarketResearchHousing implements Serializable
+public class MarketResearchHousing extends MarketResearch
 {
 
-    @Id
-    @GeneratedValue
-    private Integer id;
     @Column
     private Integer socialHousingStock;
     @Column
     private Integer numberOfTenants;
     @Column
     private Integer starRating;
-
     @Column
     private String currentDMS;
     @Column
@@ -43,16 +36,6 @@ public class MarketResearchHousing implements Serializable
     public void setCurrentDMS(String currentDMS)
     {
         this.currentDMS = currentDMS;
-    }
-
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer id)
-    {
-        this.id = id;
     }
 
     public Integer getNumberOfTenants()
@@ -84,5 +67,4 @@ public class MarketResearchHousing implements Serializable
     {
         this.starRating = starRating;
     }
-    
 }
