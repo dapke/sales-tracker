@@ -1,18 +1,11 @@
 package com.jameselsey.salestracker.domain;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
-public class MarketResearchEducation implements Serializable
+public class MarketResearchEducation extends AbstractEntity
 {
-
-    @Id
-    @GeneratedValue
-    private Integer id;
 
     @Column
     private Integer numberOfStudents;
@@ -20,13 +13,10 @@ public class MarketResearchEducation implements Serializable
     private Integer numberOfCampuses;
     @Column
     private Integer numberOfCoursesOffered;
-
     @Column
     private String currentDMS;
     @Column
     private String currentStudentRegistrySystem;
-
-
 
     public String getCurrentDMS()
     {
@@ -36,16 +26,6 @@ public class MarketResearchEducation implements Serializable
     public void setCurrentDMS(String currentDMS)
     {
         this.currentDMS = currentDMS;
-    }
-
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer id)
-    {
-        this.id = id;
     }
 
     public String getCurrentStudentRegistrySystem()
@@ -87,6 +67,4 @@ public class MarketResearchEducation implements Serializable
     {
         this.numberOfStudents = numberOfStudents;
     }
-
-
 }

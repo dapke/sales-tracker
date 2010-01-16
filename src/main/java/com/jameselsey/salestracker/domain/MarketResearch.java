@@ -1,42 +1,21 @@
 package com.jameselsey.salestracker.domain;
 
-import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-
-
 @Entity
-public class MarketResearch implements Serializable
+public class MarketResearch extends AbstractEntity
 {
 
-
-    @Id
-    @GeneratedValue
-    private Integer id;
     @Column
     private Integer numberOfStaff;
-    
-    @OneToOne(optional=true)
+    @OneToOne(optional = true)
     private MarketResearchEducation marketResearchEducation;
-    @OneToOne(optional=true)
+    @OneToOne(optional = true)
     private MarketResearchHousing marketResearchHousing;
-    @OneToOne(optional=true)
+    @OneToOne(optional = true)
     private MarketResearchLocalGovernment marketResearchLocalGovernment;
-
-
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer id)
-    {
-        this.id = id;
-    }
 
     public MarketResearchEducation getMarketResearchEducation()
     {
@@ -77,9 +56,4 @@ public class MarketResearch implements Serializable
     {
         this.marketResearchLocalGovernment = marketResearchLocalGovernment;
     }
-
-
-
-
-
 }

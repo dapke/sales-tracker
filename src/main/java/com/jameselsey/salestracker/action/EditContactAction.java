@@ -18,20 +18,6 @@ public class EditContactAction extends BaseAction
     public Client client;
     public Integer contactId;
 
-    private Contact tempContact;
-
-    public Contact getTempContact()
-    {
-        return tempContact;
-    }
-
-    public void setTempContact(Contact tempContact)
-    {
-        this.tempContact = tempContact;
-    }
-
- 
-
     public Integer getContactId()
     {
         return contactId;
@@ -65,23 +51,19 @@ public class EditContactAction extends BaseAction
     @DefaultHandler
     public Resolution viewContacts()
     {
-        System.out.println("test");
-        client = clientService.getClientById(client.getId());
         return new ForwardResolution("/jsp/viewClientContacts.jsp");
     }
 
     public Resolution editContact()
     {
-        tempContact = clientService.getContactById(contactId);
         return new ForwardResolution("/jsp/editContact.jsp");
     }
 
     public Resolution saveUpdatedContact()
     {
-        System.out.println("Test");
 
-        clientService.persistClient(client);
-
+//        clientService.persistClient(client);
+        //persist contact
         return new RedirectResolution("/jsp/viewClientQuickView.jsp").flash(this);
     }
 
