@@ -13,7 +13,6 @@ public class MarketResearchAction extends BaseAction
 {
 
     private static final String VIEW = "/jsp/marketResearch.jsp";
-
     private Client client;
 
     public Client getClient()
@@ -25,7 +24,7 @@ public class MarketResearchAction extends BaseAction
     {
         this.client = client;
     }
-    
+
     @DefaultHandler
     public Resolution randomDate()
     {
@@ -34,7 +33,14 @@ public class MarketResearchAction extends BaseAction
 
     public Resolution viewClientMarketResearch()
     {
+        if (client.getSector().equals("Education"))
+        {
+            return new ForwardResolution("/jsp/marketResearchEducation.jsp");
+        }
+        else if (client.getSector().equals("Local Government"))
+        {
+            return new ForwardResolution("/jsp/marketResearchLocalGovernment.jsp");
+        }
         return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
     }
-    
 }
