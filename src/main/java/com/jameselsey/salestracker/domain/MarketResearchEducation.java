@@ -4,7 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class MarketResearchEducation extends AbstractEntity
+
+public class MarketResearchEducation extends MarketResearch
 {
 
     @Column
