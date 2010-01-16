@@ -15,7 +15,7 @@
                     <td>${client.sector}</td>
                     <td><stripes:link beanclass="com.jameselsey.salestracker.action.ViewClientAction">
                              View
-                            <stripes:param name="clientId" value="${client.id}"/>
+                            <stripes:param name="client" value="${client}"/>
                             
                         </stripes:link>
                     </td>

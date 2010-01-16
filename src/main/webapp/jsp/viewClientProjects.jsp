@@ -1,17 +1,17 @@
 <%@include file="/jsp/common/taglibs.jsp" %>
-
+  
 <stripes:layout-render name="/jsp/common/layout.jsp">
     <stripes:layout-component name="contents">
 
         <p>
-            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction" >
-                <s:hidden name="clientId" />
+            
+               
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
-            </s:form>
+            
         </p>
 
         Projects here
-
+      
         <p>
             <d:table name="${actionBean.client.projects}" id="contact" requestURI=""
                      defaultsort="1" >

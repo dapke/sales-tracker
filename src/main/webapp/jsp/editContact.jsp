@@ -9,23 +9,23 @@
                 <jsp:include page="/jsp/common/menuClient.jsp"/>
             </s:form>
         </p>
-
-        <s:form beanclass="com.jameselsey.salestracker.action.EditContactAction"
-                action="saveUpdatedContact">
+        ${actionBean.tempContact.firstName}
+        <s:form beanclass="com.jameselsey.salestracker.action.EditContactAction">
             <s:hidden name="clientId" value="${actionBean.clientId}"/>
             <s:hidden name="contactId" value="${actionBean.contactId}"/>
+            <s:hidden name="contact.id"/>
             <table>
                 <tr>
                     <td>First Name : </td>
-                    <td><s:text name="contact.firstName"/></td>
+                    <td><s:text name="tempContact.firstName"/></td>
                 </tr>
                 <tr>
                     <td>Last Name : </td>
-                    <td><s:text name="contact.lastName"/></td>
+                    <td><s:text name="tempContact.lastName"/></td>
                 </tr>
                 <tr>
                     <td>
-                        <%--<s:submit name="save" value="save"/>--%>
+                        <s:submit name="save" value="saveUpdatedContact"/>
                     </td>
                 </tr>
             </table>

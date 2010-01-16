@@ -9,11 +9,10 @@ import net.sourceforge.stripes.action.Resolution;
  *
  * @author James
  */
-public class MarketResearchAction extends BaseAction
+public class ViewClientProjectAction extends BaseAction
 {
 
-    private static final String VIEW = "/jsp/marketResearch.jsp";
-
+    private static final String VIEW = "/jsp/viewClientProjects.jsp";
     private Client client;
 
     public Client getClient()
@@ -25,16 +24,10 @@ public class MarketResearchAction extends BaseAction
     {
         this.client = client;
     }
-    
+
     @DefaultHandler
-    public Resolution randomDate()
+    public Resolution viewClientProjects()
     {
         return new ForwardResolution(VIEW);
     }
-
-    public Resolution viewClientMarketResearch()
-    {
-        return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
-    }
-    
 }
