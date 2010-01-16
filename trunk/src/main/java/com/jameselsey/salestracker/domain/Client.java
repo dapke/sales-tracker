@@ -1,7 +1,7 @@
 package com.jameselsey.salestracker.domain;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -30,9 +30,9 @@ public class Client extends NamedEntity
     @Column
     private String mainPhoneNumber;
     @OneToMany(mappedBy = "client")
-    private List<Contact> contacts;
+    private Set<Contact> contacts = new HashSet<Contact>();
     @Transient
-    private List<Project> projects;
+    private Set<Project> projects = new HashSet<Project>();
     @Transient
     private MarketResearch marketResearch;
 
@@ -128,15 +128,7 @@ public class Client extends NamedEntity
         this.postcode = postcode;
     }
 
-    public List<Project> getProjects()
-    {
-        return projects;
-    }
 
-    public void setProjects(List<Project> projects)
-    {
-        this.projects = projects;
-    }
 
     public MarketResearch getMarketResearch()
     {
@@ -148,13 +140,25 @@ public class Client extends NamedEntity
         this.marketResearch = marketResearch;
     }
 
-    public Collection<Contact> getContacts()
+    public Set<Contact> getContacts()
     {
         return contacts;
     }
 
-    public void setContacts(List<Contact> contacts)
+    public void setContacts(Set<Contact> contacts)
     {
         this.contacts = contacts;
     }
+
+    public Set<Project> getProjects()
+    {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects)
+    {
+        this.projects = projects;
+    }
+
+  
 }
