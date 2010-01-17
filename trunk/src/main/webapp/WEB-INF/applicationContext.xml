@@ -26,5 +26,24 @@
     <tx:annotation-driven/>
     
     <bean id="clientService" class="com.jameselsey.salestracker.service.ClientService"/>
-            
+
+    <bean id="dbUnitBootstrapper" class="com.jameselsey.salestracker.testing.DBUnitBootstrapper"
+        init-method="execute">
+        <property name="enabled" value="true"/>
+        <property name="operations">
+            <list>
+                <bean class="org.dbunit.ant.Operation">
+                    <property name="type" value="CLEAN_INSERT"/>
+                    <property name="src" value="classpath:testdata.xml"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"/>
+        <property name="url" value="jdbc:derby://localhost:1527/salestracker"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="admin"/>
+    </bean>
 </beans>

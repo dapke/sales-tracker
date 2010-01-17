@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+
+<!--    <MARKETRESEARCHLOCALGOVERNMENT
+        id="1"
+        currentDMS="Sharepoint"/>
+    <MARKETRESEARCH
+        id="1"
+        numberOfStaff="86"/>-->
+
+    <CLIENT id="-1"
+        address1="Endeavour House"
+        address2="Russell Rd"
+        country="England"
+        county="Suffolk"
+        mainPhoneNumber="0845 606 6067"
+        name="Suffolk County Council"
+        postcode="IP1 2BX"
+        sector="Local Government"
+        town="Ipswich"
+        websiteURL="www.suffolk.gov.uk"/>
+
+   <!-- <CONTACT
+        id="1"
+        deskPhone="01473 123123"
+        emailAddress="Dave.Brown@Suffolk.gov.uk"
+        firstName="Dave"
+        jobRole="Finance Director"
+        lastName="Brown"
+        mobilePhone="07812 345678"
+        clientId="1"/>
+
+    -->
+
+    
+
+</dataset>
+
