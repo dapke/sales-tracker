@@ -35,9 +35,10 @@ public class Client extends NamedEntity
     private Set<Contact> contacts = new HashSet<Contact>();
     @Transient
     private Set<Project> projects = new HashSet<Project>();
-    @OneToOne
-    @JoinColumn(name = "MARKET_RESEARCH_ID")
-    private MarketResearch marketResearch;
+//@Transient
+//        @OneToOne
+//    @JoinColumn(name = "MARKET_RESEARCH_ID")
+//    private MarketResearch marketResearch;
 
    
 
@@ -131,17 +132,17 @@ public class Client extends NamedEntity
         this.postcode = postcode;
     }
 
-
-
-    public MarketResearch getMarketResearch()
-    {
-        return marketResearch;
-    }
-
-    public void setMarketResearch(MarketResearch marketResearch)
-    {
-        this.marketResearch = marketResearch;
-    }
+//
+//
+//    public MarketResearch getMarketResearch()
+//    {
+//        return marketResearch;
+//    }
+//
+//    public void setMarketResearch(MarketResearch marketResearch)
+//    {
+//        this.marketResearch = marketResearch;
+//    }
 
     public Set<Contact> getContacts()
     {
