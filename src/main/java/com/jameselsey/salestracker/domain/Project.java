@@ -4,13 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-@Entity
+@Entity(name="PROJET")
 public class Project extends AbstractEntity
 {
 
-    @Column
+    @Column(name="TYPE")
     private String type;
-    @Column
+    @Column(name="PROJECT_VALUE")
     private String projectValue;
     @ManyToOne
     private Client client;

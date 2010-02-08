@@ -13,23 +13,23 @@ import javax.persistence.Transient;
 public class Client extends NamedEntity
 {
 
-    @Column
+    @Column(name="SECTOR")
     private String sector;
-    @Column
+    @Column(name="ADDRESS1")
     private String address1;
-    @Column
+    @Column(name="ADDRESS2")
     private String address2;
-    @Column
+    @Column(name="TOWN")
     private String town;
-    @Column
+    @Column(name="COUNTY")
     private String county;
-    @Column
+    @Column(name="POSTCODE")
     private String postcode;
-    @Column
+    @Column(name="COUNTRY")
     private String country;
-    @Column
+    @Column(name="WEBSITE_URL")
     private String websiteURL;
-    @Column
+    @Column(name="MAIN_PHONE_NUMBER")
     private String mainPhoneNumber;
     @OneToMany(mappedBy = "client")
     private Set<Contact> contacts = new HashSet<Contact>();

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 public class MarketResearchLocalGovernment extends MarketResearch
 {
 
-    @Column
+    @Column(name="CURRENT_DMS")
     private String currentDMS;
 
     public String getCurrentDMS()

@@ -10,7 +10,7 @@ import javax.persistence.InheritanceType;
 public abstract class MarketResearch extends AbstractEntity
 {
 
-    @Column
+    @Column(name="NUMBER_OF_STAFF")
     private Integer numberOfStaff;
 
     public Integer getNumberOfStaff()
