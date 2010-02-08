@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
-@Entity
+@Entity(name="CLIENT")
 public class Client extends NamedEntity
 {
 
@@ -36,9 +36,9 @@ public class Client extends NamedEntity
     @Transient
     private Set<Project> projects = new HashSet<Project>();
 //@Transient
-//        @OneToOne
-//    @JoinColumn(name = "MARKET_RESEARCH_ID")
-//    private MarketResearch marketResearch;
+        @OneToOne
+    @JoinColumn(name = "MARKET_RESEARCH_ID")
+    private MarketResearch marketResearch;
 
    
 
@@ -132,17 +132,17 @@ public class Client extends NamedEntity
         this.postcode = postcode;
     }
 
-//
-//
-//    public MarketResearch getMarketResearch()
-//    {
-//        return marketResearch;
-//    }
-//
-//    public void setMarketResearch(MarketResearch marketResearch)
-//    {
-//        this.marketResearch = marketResearch;
-//    }
+
+
+    public MarketResearch getMarketResearch()
+    {
+        return marketResearch;
+    }
+
+    public void setMarketResearch(MarketResearch marketResearch)
+    {
+        this.marketResearch = marketResearch;
+    }
 
     public Set<Contact> getContacts()
     {
