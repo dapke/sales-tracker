@@ -8,17 +8,17 @@ import javax.persistence.ManyToOne;
 public class Contact extends AbstractEntity
 {
 
-    @Column
+    @Column(name="FIRST_NAME")
     private String firstName;
-    @Column
+    @Column(name="LAST_NAME")
     private String lastName;
-    @Column
+    @Column(name="JOB_ROLE")
     private String jobRole;
-    @Column
+    @Column(name="DESK_PHONE")
     private String deskPhone;
-    @Column
+    @Column(name="MOBILE_PHONE")
     private String mobilePhone;
-    @Column
+    @Column(name="EMAIL_ADDRESS")
     private String emailAddress;
     @ManyToOne
     private Client client;

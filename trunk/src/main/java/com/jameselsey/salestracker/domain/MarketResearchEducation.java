@@ -8,15 +8,15 @@ import javax.persistence.Entity;
 public class MarketResearchEducation extends MarketResearch
 {
 
-    @Column
+    @Column(name="NUMBER_OF_STUDENTS")
     private Integer numberOfStudents;
-    @Column
+    @Column(name="NUMBER_OF_CAMPUS")
     private Integer numberOfCampuses;
-    @Column
+    @Column(name="NUMBER_OF_COURSES")
     private Integer numberOfCoursesOffered;
-    @Column
+    @Column(name="CURRENT_DMS")
     private String currentDMS;
-    @Column
+    @Column(name="CURRENT_STU_REG_SYS")
     private String currentStudentRegistrySystem;
 
     public String getCurrentDMS()

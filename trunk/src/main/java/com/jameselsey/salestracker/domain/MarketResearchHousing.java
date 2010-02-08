@@ -7,15 +7,15 @@ import javax.persistence.Entity;
 public class MarketResearchHousing extends MarketResearch
 {
 
-    @Column
+    @Column(name="SOCIAL_HOUSING_STOCK")
     private Integer socialHousingStock;
-    @Column
+    @Column(name="NUMBER_OF_TENANTS")
     private Integer numberOfTenants;
-    @Column
+    @Column(name="STAR_RATING")
     private Integer starRating;
-    @Column
+    @Column(name="CURRENT_DMS")
     private String currentDMS;
-    @Column
+    @Column(name="CURRENT_CRM")
     private String currentCRM;
 
     public String getCurrentCRM()
