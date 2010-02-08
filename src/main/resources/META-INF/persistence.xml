@@ -11,16 +11,16 @@
          <!--Autodetect entity classes -->
             <property name="hibernate.archive.autodetection" value="class"/>
          <!--Automatically create the SQL schema -->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
        <!--Tell Hibernate to use HSQLDB -->
             <property name="hibernate.dialect"
-        value="org.hibernate.dialect.DerbyDialect" />
+        value="org.hibernate.dialect.MySQL5Dialect" />
             <property name="hibernate.connection.driver_class"
-        value="org.apache.derby.jdbc.ClientDriver" />
+        value="com.mysql.jdbc.Driver" />
        <!--Configure the JDBC database connection-->
-            <property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/salestracker" />
-            <property name="hibernate.connection.username" value="admin"/>
-            <property name="hibernate.connection.password" value="admin"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/salestracker" />
+            <property name="hibernate.connection.username" value="salestracker"/>
+            <property name="hibernate.connection.password" value="salestracker"/>
             <property name="jdbc.batch_size" value="0"/>
        <!--Configure the connection pool--> 
             <property name="hibernate.c3p0.min_size" value="5"/>

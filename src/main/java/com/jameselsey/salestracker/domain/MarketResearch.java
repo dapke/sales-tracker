@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-@Entity
+@Entity(name="MARKETRESEARCH")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class MarketResearch extends AbstractEntity
 {

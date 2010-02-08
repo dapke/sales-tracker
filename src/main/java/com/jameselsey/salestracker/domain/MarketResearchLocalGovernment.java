@@ -3,7 +3,7 @@ package com.jameselsey.salestracker.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-@Entity
+@Entity(name="MARKETRESEARCHLG")
 public class MarketResearchLocalGovernment extends MarketResearch
 {
 
