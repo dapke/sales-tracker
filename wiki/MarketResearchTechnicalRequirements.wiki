@@ -2,7 +2,7 @@
 
 = Requirements =
 
-Add your content here.
+All customers will have a market research entity attached to them, it will have some common fields, and then it will have a subset dependant on the customers sector which will have data specific to that sector
 
 
 = Details =
