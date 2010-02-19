@@ -7,12 +7,16 @@
         <table>
             <tr><th>Oppurtunity</th>
                 <th>Sector</th>
+                <th>County</th>
+                <th>Country</th>
                 <th></th>
             </tr>
             <c:forEach var="client" items="${actionBean.clients}">
                 <tr>
                     <td>${client.name}</td>
                     <td>${client.sector}</td>
+                    <td>${client.county}</td>
+                    <td>${client.country}</td>
                     <td><stripes:link beanclass="com.jameselsey.salestracker.action.ViewClientAction">
                              View
                             <stripes:param name="client" value="${client}"/>
