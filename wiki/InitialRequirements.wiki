@@ -4,6 +4,8 @@ Initial requirements, an overview of what the system intends to achieve
 
 An overview of the system requirements are as follows
 
+[customers]
+
 *Customers*
   * Search - Search by name, type, area, and other criteria TBC
   * Create - Ability to create new customers, this will be a form that should be populated by the user. Relevant checks will be implemented to stop duplicates/bad data etc.
