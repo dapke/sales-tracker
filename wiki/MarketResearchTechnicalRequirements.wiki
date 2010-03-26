@@ -10,6 +10,8 @@ Ideally, market research information should be tracked over time, we should be a
 Common fields
 
   * Number of staff
+  * DMS Procurement Date
+  * CRM Procurement Date
  
 Education
 
@@ -41,5 +43,3 @@ Local Government
   * Current Licensing System
   * Current Parking System
   * Current HR System
-
-
