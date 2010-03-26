@@ -10,8 +10,8 @@
         <s:messages/>
         <p>
 
+            Corporate Info
         <table>
-
             <tr>
                 <td>socialHousingStock : </td>
                 <td>${actionBean.client.marketResearch.socialHousingStock}</td>
@@ -24,6 +24,10 @@
                 <td>starRating : </td>
                 <td>${actionBean.client.marketResearch.starRating}</td>
             </tr>
+        </table>
+
+        Systems
+        <table>
             <tr>
                 <td>currentDMS : </td>
                 <td>${actionBean.client.marketResearch.currentDMS}</td>
@@ -33,6 +37,18 @@
                 <td>${actionBean.client.marketResearch.currentCRM}</td>
             </tr>
 
+        </table>
+
+        Timescales and Procurements
+        <table>
+            <tr>
+                <td>CRM Procurement Date</td>
+                <td>${actionBean.client.marketResearch.crmProcurementDate}</td>
+            </tr>
+            <tr>
+                <td>DMS Procurement Date</td>
+                <td>${actionBean.client.marketResearch.dmsProcurementDate}</td>
+            </tr>
         </table>
 
 

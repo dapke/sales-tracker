@@ -18,6 +18,8 @@ public class MarketResearchEducation extends MarketResearch
     private String currentDMS;
     @Column(name="CURRENT_STU_REG_SYS")
     private String currentStudentRegistrySystem;
+    @Column(name = "CURRENT_ACCOUNTS_SYSTEM")
+    private String currentAccountsSystem;
 
     public String getCurrentDMS()
     {
@@ -68,4 +70,15 @@ public class MarketResearchEducation extends MarketResearch
     {
         this.numberOfStudents = numberOfStudents;
     }
+
+    public String getCurrentAccountsSystem()
+    {
+        return currentAccountsSystem;
+    }
+
+    public void setCurrentAccountsSystem(String currentAccountsSystem)
+    {
+        this.currentAccountsSystem = currentAccountsSystem;
+    }
+    
 }

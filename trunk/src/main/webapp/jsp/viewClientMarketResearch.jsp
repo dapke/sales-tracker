@@ -21,7 +21,7 @@
                 <tr>
                     <td>Current CRM</td>                
                     <td>${actionBean.client.marketResearch.marketResearchHousing.currentCRM}</td>
-                </tr>
+
             </table>
         </p>
 
@@ -40,6 +40,14 @@
             <tr>
                 <td>Star Rating</td>
                 <td>${actionBean.client.marketResearch.marketResearchHousing.starRating}</td>
+            </tr>
+            <tr>
+                <td>DMS Procurement Date</td>
+                <td>${actionBean.client.marketResearch.marketResearchHousing.dmsProcurementDate}</td>
+            </tr>
+            <tr>
+                <td>CRM Procurement Date</td>
+                <td>${actionBean.client.marketResearch.marketResearchHousing.crmProcurementDate}</td>
             </tr>
         </table>
     </p>
