@@ -41,6 +41,10 @@ public class MarketResearchAction extends BaseAction
         {
             return new ForwardResolution("/jsp/marketResearchLocalGovernment.jsp");
         }
+        else if (client.getSector().equals("Housing Association"))
+        {
+            return new ForwardResolution("/jsp/marketResearchHousing.jsp");
+        }
         return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
     }
 }

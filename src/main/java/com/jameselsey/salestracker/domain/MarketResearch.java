@@ -13,6 +13,8 @@ public abstract class MarketResearch extends AbstractEntity
     @Column(name="NUMBER_OF_STAFF")
     private Integer numberOfStaff;
 
+
+
     public Integer getNumberOfStaff()
     {
         return numberOfStaff;
@@ -22,4 +24,7 @@ public abstract class MarketResearch extends AbstractEntity
     {
         this.numberOfStaff = numberOfStaff;
     }
+
+   
+    
 }

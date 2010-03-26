@@ -32,6 +32,11 @@
                 <td>currentStudentRegistrySystem : </td>
                 <td>${actionBean.client.marketResearch.currentStudentRegistrySystem}</td>
             </tr>
+            <tr>
+                <td>currentAccountsSystem : </td>
+                <td>${actionBean.client.marketResearch.currentAccountsSystem}</td>
+            </tr>
+
 
         </table>
 
