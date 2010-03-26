@@ -44,4 +44,5 @@ The customer entity should contain the following items:
 
 TBA
  == Market Research ==
-TBA
+
+This page will present a form with market research information, allowing the user to enter information such as current DMS system, Student records system and such. This will allow the user to obtain profiling information about the client when speaking to them, this will in turn help us to create specific targetted reports, and to also make suggestions on products/services that can be sold to that client. For example, if we know client A has system X, we can inform them about our integration with system X at client B 
