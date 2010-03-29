@@ -9,38 +9,40 @@
         </p>
         <s:messages/>
         <p>
+            <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction">
+                <s:hidden name="client" value="${actionBean.client}"/>
+            <table>
 
-        <table>
-
-            <tr>
-                <td>numberOfStudents : </td>
-                <td>${actionBean.client.marketResearch.numberOfStudents}</td>
-            </tr>
-            <tr>
-                <td>numberOfCampuses : </td>
-                <td>${actionBean.client.marketResearch.numberOfCampuses}</td>
-            </tr>
-            <tr>
-                <td>numberOfCoursesOffered : </td>
-                <td>${actionBean.client.marketResearch.numberOfCoursesOffered}</td>
-            </tr>
-            <tr>
-                <td>currentDMS : </td>
-                <td>${actionBean.client.marketResearch.currentDMS}</td>
-            </tr>
-            <tr>
-                <td>currentStudentRegistrySystem : </td>
-                <td>${actionBean.client.marketResearch.currentStudentRegistrySystem}</td>
-            </tr>
-            <tr>
-                <td>currentAccountsSystem : </td>
-                <td>${actionBean.client.marketResearch.currentAccountsSystem}</td>
-            </tr>
-
-
-        </table>
+                <tr>
+                    <td>numberOfStudents : </td>
+                    <td><s:text name ="client.marketResearch.numberOfStudents"/></td>
+                </tr>
+                <tr>
+                    <td>numberOfCampuses : </td>
+                    <td><s:text name ="client.marketResearch.numberOfCampuses"/></td>
+                </tr>
+                <tr>
+                    <td>numberOfCoursesOffered : </td>
+                    <td><s:text name ="client.marketResearch.numberOfCoursesOffered"/></td>
+                </tr>
+                <tr>
+                    <td>currentDMS : </td>
+                    <td><s:text name ="client.marketResearch.currentDMS"/></td>
+                </tr>
+                <tr>
+                    <td>currentStudentRegistrySystem : </td>
+                    <td><s:text name ="client.marketResearch.currentStudentRegistrySystem"/></td>
+                </tr>
+                <tr>
+                    <td>currentAccountsSystem : </td>
+                    <td><s:text name ="client.marketResearch.currentAccountsSystem"/></td>
+                </tr>
 
 
+            </table>
+
+            <s:submit name="save" value="save"/>
+        </s:form>
 
     </stripes:layout-component>
 </stripes:layout-render>

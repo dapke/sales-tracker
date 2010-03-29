@@ -2,6 +2,7 @@ package com.jameselsey.salestracker.domain;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -36,8 +37,9 @@ public class Client extends NamedEntity
     @Transient
     private Set<Project> projects = new HashSet<Project>();
 //@Transient
-        @OneToOne
+        @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "MARKET_RESEARCH_ID")
+
     private MarketResearch marketResearch;
 
    

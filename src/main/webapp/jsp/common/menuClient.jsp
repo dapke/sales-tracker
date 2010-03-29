@@ -16,13 +16,13 @@
         Contacts
         <stripes:param name="client" value="${actionBean.client}"/>
     </s:link> |
-    <s:link beanclass="com.jameselsey.salestracker.action.MarketResearchAction"
+    <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
             event="viewClientMarketResearch" class="navLink">
         Market Research
         <stripes:param name="client" value="${actionBean.client}"/>
     </s:link> |
-    <s:link beanclass="com.jameselsey.salestracker.action.ViewClientProjectAction"
-              class="navLink">
+    <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
+              event="viewClientProjects" class="navLink">
         Projects
         <stripes:param name="client" value="${actionBean.client}"/>
     </s:link>
