@@ -2,16 +2,16 @@
 
 <p>
     <s:link beanclass="com.jameselsey.salestracker.action.DashboardAction" class="navLink">
-        Dashboard
+        <fmt:message key="mainMenu.dashboard"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ClientSearchAction" class="navLink">
-        Client Search
+        <fmt:message key="mainMenu.clientSearch"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.MarketResearchAction" class="navLink">
-        Market Research
+        <fmt:message key="mainMenu.marketResearch"/>
     </s:link> |
     <s:link beanclass="com.jameselsey.salestracker.action.ReportsAction" class="navLink">
-        Reports
+        <fmt:message key="mainMenu.reports"/>
     </s:link>
 </p>
 

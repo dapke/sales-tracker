@@ -15,31 +15,31 @@
             <table>
 
                 <tr>
-                    <td>currentDMS : </td>
+                    <td><fmt:message key="label.dms"/> : </td>
                     <td><s:text name = "client.marketResearch.currentDMS" /></td>
                 </tr>
                 <tr>
-                    <td>currentRevenuesSystem : </td>
+                    <td><fmt:message key="label.revenuesSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentRevenuesSystem" /></td>
                 </tr>
                 <tr>
-                    <td>currentBenefitsSystem : </td>
+                    <td><fmt:message key="label.benefitsSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentBenefitsSystem"/></td>
                 </tr>
                 <tr>
-                    <td>currentPlanningSystem : </td>
+                    <td><fmt:message key="label.planningSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentPlanningSystem"/></td>
                 </tr>
                 <tr>
-                    <td>currentLicensingSystem : </td>
+                    <td><fmt:message key="label.licensingSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentLicensingSystem"/></td>
                 </tr>
                 <tr>
-                    <td>currentParkingSystem : </td>
+                    <td><fmt:message key="label.parkingSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentParkingSystem"/></td>
                 </tr>
                 <tr>
-                    <td>currentHRSystem : </td>
+                    <td><fmt:message key="label.hrSystem"/> : </td>
                     <td><s:text name = "client.marketResearch.currentHRSystem"/></td>
                 </tr>
 

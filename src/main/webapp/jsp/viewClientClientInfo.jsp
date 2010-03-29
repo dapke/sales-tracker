@@ -13,43 +13,43 @@
 
             <table>
                 <tr>
-                    <td>Name : </td>
+                    <td><fmt:message key="label.name"/> : </td>
                     <td><s:text name="client.name"/></td>
                 </tr>
                 <tr>
-                    <td>Sector : </td>
+                    <td><fmt:message key="label.sector"/> : </td>
                     <td><s:text name="client.sector"/></td>
                 </tr>
                 <tr>
-                    <td>Address Line 1 : </td>
-                    <td><s:text name="client.address1"/></td>
+                    <td><fmt:message key="label.addressLine1"/> : </td>
+                    <td><s:text name="client.addressLine1"/></td>
                 </tr>
                 <tr>
-                    <td>Address Line 2 : </td>
-                    <td><s:text name="client.address2"/></td>
+                    <td><fmt:message key="label.addressLine2"/> : </td>
+                    <td><s:text name="client.addressLine2"/></td>
                 </tr>
                 <tr>
-                    <td>Town : </td>
+                    <td><fmt:message key="label.town"/> : </td>
                     <td><s:text name="client.town"/></td>
                 </tr>
                 <tr>
-                    <td>County : </td>
+                    <td><fmt:message key="label.county"/> : </td>
                     <td><s:text name="client.county"/></td>
                 </tr>
                 <tr>
-                    <td>Postcode : </td>
+                    <td><fmt:message key="label.postcode"/> : </td>
                     <td><s:text name="client.postcode"/></td>
                 </tr>
                 <tr>
-                    <td>Country : </td>
+                    <td><fmt:message key="label.country"/> : </td>
                     <td><s:text name="client.country"/></td>
                 </tr>
                 <tr>
-                    <td>Website : </td>
+                    <td><fmt:message key="label.website"/> : </td>
                     <td><s:text name="client.websiteURL"/></td>
                 </tr>
                 <tr>
-                    <td>Main Phone Number : </td>
+                    <td><fmt:message key="label.mainPhoneNumber"/> : </td>
                     <td><s:text name="client.mainPhoneNumber"/></td>
                 </tr>
                 <tr>
