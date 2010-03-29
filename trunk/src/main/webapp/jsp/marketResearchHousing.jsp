@@ -11,43 +11,43 @@
         <p>
             <s:form beanclass="com.jameselsey.salestracker.action.ViewClientAction">
                 <s:hidden name="client" value="${actionBean.client}"/>
-                Corporate Info
+                <fmt:message key="label.corporateInfo"/>
             <table>
                 <tr>
-                    <td>socialHousingStock : </td>
+                    <td><fmt:message key="label.socialHousingStock"/> : </td>
                     <td><s:text name ="client.marketResearch.socialHousingStock"/></td>
                 </tr>
                 <tr>
-                    <td>numberOfTenants : </td>
+                    <td><fmt:message key="label.numberOfTenants"/> : </td>
                     <td><s:text name ="client.marketResearch.numberOfTenants"/></td>
                 </tr>
                 <tr>
-                    <td>starRating : </td>
+                    <td><fmt:message key="label.starRating"/> : </td>
                     <td><s:text name ="client.marketResearch.starRating"/></td>
                 </tr>
             </table>
 
-            Systems
+            <fmt:message key="label.systems"/>
             <table>
                 <tr>
-                    <td>currentDMS : </td>
+                    <td><fmt:message key="label.dms"/> : </td>
                     <td><s:text name ="client.marketResearch.currentDMS"/></td>
                 </tr>
                 <tr>
-                    <td>currentCRM : </td>
+                    <td><fmt:message key="label.crm"/> : </td>
                     <td><s:text name ="client.marketResearch.currentCRM"/></td>
                 </tr>
 
             </table>
 
-            Timescales and Procurements
+            <fmt:message key="label.timescalesAndProcurements"/>
             <table>
                 <tr>
-                    <td>CRM Procurement Date</td>
+                    <td><fmt:message key="label.crmProcurementDate"/></td>
                     <td><s:text name ="client.marketResearch.crmProcurementDate"/></td>
                 </tr>
                 <tr>
-                    <td>DMS Procurement Date</td>
+                    <td><fmt:message key="label.dmsProcurementDate"/></td>
                     <td><s:text name ="client.marketResearch.dmsProcurementDate"/></td>
                 </tr>
             </table>

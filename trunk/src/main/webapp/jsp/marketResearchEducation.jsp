@@ -14,27 +14,27 @@
             <table>
 
                 <tr>
-                    <td>numberOfStudents : </td>
+                    <td><fmt:message key="label.numberOfStudents"/> : </td>
                     <td><s:text name ="client.marketResearch.numberOfStudents"/></td>
                 </tr>
                 <tr>
-                    <td>numberOfCampuses : </td>
+                    <td><fmt:message key="label.numberOfCampuses"/> : </td>
                     <td><s:text name ="client.marketResearch.numberOfCampuses"/></td>
                 </tr>
                 <tr>
-                    <td>numberOfCoursesOffered : </td>
+                    <td><fmt:message key="label.numberOfCoursesOffered"/> : </td>
                     <td><s:text name ="client.marketResearch.numberOfCoursesOffered"/></td>
                 </tr>
                 <tr>
-                    <td>currentDMS : </td>
+                    <td><fmt:message key="label.dms"/> : </td>
                     <td><s:text name ="client.marketResearch.currentDMS"/></td>
                 </tr>
                 <tr>
-                    <td>currentStudentRegistrySystem : </td>
+                    <td><fmt:message key="label.studentRegistrySystem"/> : </td>
                     <td><s:text name ="client.marketResearch.currentStudentRegistrySystem"/></td>
                 </tr>
                 <tr>
-                    <td>currentAccountsSystem : </td>
+                    <td><fmt:message key="label.accountsSystem"/> : </td>
                     <td><s:text name ="client.marketResearch.currentAccountsSystem"/></td>
                 </tr>
 
