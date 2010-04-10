@@ -2,7 +2,9 @@
 
 <stripes:layout-render name="/jsp/common/layout.jsp">
     <stripes:layout-component name="contents">
-
+        <p>
+            <jsp:include page="/jsp/common/menuDashboard.jsp"/>
+        </p>
         <p>
             Tasks
         <ol>
@@ -19,7 +21,7 @@
         <li>Forgot to call Dave yesterday - 24hours overdue</li>
         <li>Forgot to schedule meeting with Norfolk Homes - 72hours overdue</li>
     </ul>
-    </p>
+</p>
 
 
 

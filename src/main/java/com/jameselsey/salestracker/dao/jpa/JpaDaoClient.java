@@ -3,6 +3,7 @@ package com.jameselsey.salestracker.dao.jpa;
 import com.jameselsey.salestracker.dao.ClientDao;
 import com.jameselsey.salestracker.domain.Client;
 import com.jameselsey.salestracker.domain.Contact;
+import com.jameselsey.salestracker.domain.Task;
 import java.util.List;
 
 public class JpaDaoClient extends JpaDao implements ClientDao
@@ -47,6 +48,14 @@ public class JpaDaoClient extends JpaDao implements ClientDao
         String jpql = "SELECT c " +
                 "FROM com.jameselsey.salestracker.domain.Client c";
 
+        return getJpaTemplate().find(jpql);
+    }
+
+    @Override
+    public List<Task> getAllTasks()
+    {
+        String jpql = "SELECT t " +
+                    "FROM com.jameselsey.salestracker.domain.Task t";
         return getJpaTemplate().find(jpql);
     }
 }

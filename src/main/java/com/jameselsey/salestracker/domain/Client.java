@@ -10,39 +10,38 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
-@Entity(name="CLIENT")
+@Entity(name = "CLIENT")
 public class Client extends NamedEntity
 {
 
-    @Column(name="SECTOR")
+    @Column(name = "SECTOR")
     private String sector;
-    @Column(name="ADDRESS1")
+    @Column(name = "ADDRESS1")
     private String address1;
-    @Column(name="ADDRESS2")
+    @Column(name = "ADDRESS2")
     private String address2;
-    @Column(name="TOWN")
+    @Column(name = "TOWN")
     private String town;
-    @Column(name="COUNTY")
+    @Column(name = "COUNTY")
     private String county;
-    @Column(name="POSTCODE")
+    @Column(name = "POSTCODE")
     private String postcode;
-    @Column(name="COUNTRY")
+    @Column(name = "COUNTRY")
     private String country;
-    @Column(name="WEBSITE_URL")
+    @Column(name = "WEBSITE_URL")
     private String websiteURL;
-    @Column(name="MAIN_PHONE_NUMBER")
+    @Column(name = "MAIN_PHONE_NUMBER")
     private String mainPhoneNumber;
     @OneToMany(mappedBy = "client")
     private Set<Contact> contacts = new HashSet<Contact>();
     @Transient
     private Set<Project> projects = new HashSet<Project>();
-//@Transient
-        @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "MARKET_RESEARCH_ID")
-
     private MarketResearch marketResearch;
 
-   
+    @OneToMany(mappedBy = "client")
+    private Set<Task> tasks = new HashSet<Task>();
 
     public String getSector()
     {
@@ -134,8 +133,6 @@ public class Client extends NamedEntity
         this.postcode = postcode;
     }
 
-
-
     public MarketResearch getMarketResearch()
     {
         return marketResearch;
@@ -166,5 +163,14 @@ public class Client extends NamedEntity
         this.projects = projects;
     }
 
-  
+    public Set<Task> getTasks()
+    {
+        return tasks;
+    }
+
+    public void setTasks(Set<Task> tasks)
+    {
+        this.tasks = tasks;
+    }
+
 }

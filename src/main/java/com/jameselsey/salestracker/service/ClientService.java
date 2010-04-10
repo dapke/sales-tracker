@@ -3,6 +3,7 @@ package com.jameselsey.salestracker.service;
 import com.jameselsey.salestracker.dao.ClientDao;
 import com.jameselsey.salestracker.domain.Client;
 import com.jameselsey.salestracker.domain.Contact;
+import com.jameselsey.salestracker.domain.Task;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Required;
@@ -40,5 +41,10 @@ public class ClientService
     public Contact getContactById(Integer contactId)
     {
         return clientDao.getContactById(contactId);
+    }
+
+    public List<Task> fetchTasks()
+    {
+        return clientDao.getAllTasks();
     }
 }
