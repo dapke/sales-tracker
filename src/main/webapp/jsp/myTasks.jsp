@@ -7,18 +7,18 @@
         </p>
 
         <table>
-            <tr><th>Summary</th>
-                <th>Description</th>
-                <th>Status</th>
-                <th>Assigned To</th>
+            <tr><th><fmt:message key="label.summary"/></th>
+                <th><fmt:message key="label.status"/></th>
+                <th><fmt:message key="label.assignedTo"/></th>
+                <th><fmt:message key="label.client"/></th>
                 <th></th>
             </tr>
             <c:forEach var="task" items="${actionBean.tasks}">
                 <tr>
                     <td>${task.summary}</td>
-                    <td>${task.description}</td>
                     <td>${task.status}</td>
                     <td>${task.assignedTo}</td>
+                    <td>${task.client.name}</td>
                 </tr>
             </c:forEach>
         </table>

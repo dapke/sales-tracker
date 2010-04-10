@@ -62,13 +62,11 @@ public class ViewClientAction extends BaseAction
         return new ForwardResolution("/jsp/viewClientMarketResearch.jsp");
     }
 
-//    public Resolution saveMarketResearch()
-//    {
-//        clientBeforeChanges = clientService.getClientById(client.getId());
-//        clientService.persistClient(client);
-//        getContext().getMessages().add(new SimpleMessage("{0} updated", client.getName()));
-//        return new RedirectResolution(ViewClientAction.class).flash(this);
-//    }
+    public Resolution raiseTask()
+    {
+        
+        return new ForwardResolution("/jsp/viewClientClientInfo.jsp");
+    }
 
     public Resolution viewClientProjects()
     {
