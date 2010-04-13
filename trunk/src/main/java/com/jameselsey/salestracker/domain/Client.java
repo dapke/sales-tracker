@@ -40,7 +40,7 @@ public class Client extends NamedEntity
     @JoinColumn(name = "MARKET_RESEARCH_ID")
     private MarketResearch marketResearch;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", cascade=CascadeType.ALL)
     private Set<Task> tasks = new HashSet<Task>();
 
     public String getSector()

@@ -25,5 +25,10 @@
               event="viewClientProjects" class="navLink">
         <fmt:message key="clientMenu.projects"/>
         <stripes:param name="client" value="${actionBean.client}"/>
+    </s:link> |
+    <s:link beanclass="com.jameselsey.salestracker.action.ViewClientAction"
+              event="raiseTask" class="navLink">
+        <fmt:message key="clientMenu.tasks"/>
+        <stripes:param name="client" value="${actionBean.client}"/>
     </s:link>
 </p>

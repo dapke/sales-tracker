@@ -1,6 +1,7 @@
 package com.jameselsey.salestracker.action;
 
 import com.jameselsey.salestracker.domain.Client;
+import com.jameselsey.salestracker.domain.Task;
 import com.jameselsey.salestracker.service.ClientService;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
@@ -20,6 +21,7 @@ public class ViewClientAction extends BaseAction
     ClientService clientService;
     private Client client;
     private Client clientBeforeChanges;
+    private Task task;
 
     public Client getClient()
     {
@@ -64,7 +66,13 @@ public class ViewClientAction extends BaseAction
 
     public Resolution raiseTask()
     {
-        
+        return new ForwardResolution("/jsp/viewClientTasks.jsp");
+    }
+    public Resolution saveTask()
+    {
+        System.out.println(client.getId());
+        client.getTasks().add(task);
+        clientService.persistClient(client);
         return new ForwardResolution("/jsp/viewClientClientInfo.jsp");
     }
 
@@ -97,4 +105,16 @@ public class ViewClientAction extends BaseAction
     {
         this.client = client;
     }
+
+    public Task getTask()
+    {
+        return task;
+    }
+
+    public void setTask(Task task)
+    {
+        this.task = task;
+    }
+
+
 }
